@@ -25,14 +25,7 @@ body{margin-left:0px;margin-top:0px;font-family:"Microsoft Yahei",arial,"Simsun"
     margin-top: 10px;
 }
 
-.Sub_Nav_Top {position:absolute;top:91px;right:258px;width:166px;height:280px; z-index:10; display:none;}
-.Sub_Nav_Li{width:166px;height:40px;text-align:center;color:#FFF;font-size:14px;cursor:pointer;
-text-shadow: 1px 2px 2px #333; background:url(../Images/Sub_Nav_Top_Background.png);}
-.Sub_Nav_Li div{width:100%;height:100%; position:relative; padding-top:10px;}
-.Sub_Nav_Top_Click,.Sub_Nav_Li:hover{background:url(../Images/Sub_Nav_Top_Click_Background.png);}
-
-.Middle{ position:relative; margin-top:36px; margin-left:auto; margin-right:auto; width:1594px; height:805px;
- background:url(../Images/Middle_Background.png); background-repeat:no-repeat;}
+.Middle{ position:relative; margin-top:36px; margin-left:auto; margin-right:auto; width:1594px; height:805px;}
 .Middle_Left_Nav{ position:absolute; left:45px; top:117px; width:178px; height:520px; z-index:99999} 
 .Middle_Left_Nav ul{ margin:0px; padding:0px;list-style:none;}
 .Middle_Left_Nav ul li{ cursor:pointer; width:178px; height:64px; background:url(../Images/Middle_Left_Nav.png); background-repeat:no-repeat; background-position:center; text-align:center;}
