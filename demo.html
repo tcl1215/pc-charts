@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图表</title>
+<script type="text/javascript" src="Js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<link href="Css/Index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Js/Config.js"></script>
+<script type="text/javascript" src="Js/SetNavigation.js"></script>
+<script type="text/javascript" src="Js/SetSub_Nav.js"></script>
+<script type="text/javascript" src="Js/Set_LeftNav.js"></script>
+<script type="text/javascript" src="Js/Set_Map.js"></script>
+<script type="text/javascript" src="Js/echarts.js"></script>
+</head>
+<body onselectstart="return false;">
+	<div class="whole">
+        <div id="main" style="width: 600px;height:400px;"></div>
+    </div>
+</body>
+<script type="application/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+//    var option = {
+//        tooltip: {
+//            trigger: 'axis'
+//        },
+//        radar: [
+//            {
+//                name: {
+//                    color: '#fff'
+//                },
+//                indicator: [
+//                    {text: '外观', max: 100, min: 40},
+//                    {text: '拍照', max: 100, min: 40},
+//                    {text: '系统', max: 100, min: 40},
+//                    {text: '性能', max: 100, min: 40},
+//                    {text: '屏幕', max: 100, min: 40}
+//                ],
+//                axisLine: {
+//                    lineStyle: {color: '#fff'}
+//                },
+//                splitLine: {
+//                    lineStyle: {color: '#fff'}
+//                },
+//                splitArea: {
+//                    areaStyle: {color: 'rgba(0,0,0,0)'}
+//                },
+//                splitNumber: 6,
+//                radius: 100,
+//                center: ['50%','50%'],
+//            }
+//        ],
+//        series: [
+//            {
+//                type: 'radar',
+//                tooltip: {
+//                    trigger: 'item'
+//                },
+//                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+//                data: [
+//                    {
+//                        value: [60,73,85,60,90],
+//                        name: '某软件'
+//                    }
+//                ]
+//            }
+//        ]
+//    };
+    //底部曲线图
+//    var option = {
+//        tooltip: {
+//            trigger: 'axis'
+//        },
+//        legend: {
+//            data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+//        },
+//        xAxis: {
+//            type: 'category',
+//            boundaryGap: false,
+//            data: ['周一','周二','周三','周四','周五','周六','周日']
+//        },
+//        yAxis: {
+//            type: 'value',
+//            splitLine:{show: false},//去除网格线
+//        },
+//        series: [
+//            {
+//                name:'邮件营销',
+//                type:'line',
+//                smooth: true,
+//                data:[120, 132, 101, 134, 90, 230, 210]
+//            },
+//            {
+//                name:'联盟广告',
+//                type:'line',
+//                smooth: true,
+//                data:[220, 182, 191, 234, 290, 330, 310]
+//            },
+//            {
+//                name:'视频广告',
+//                type:'line',
+//                smooth: true,
+//                data:[150, 232, 201, 154, 190, 330, 410]
+//            },
+//            {
+//                name:'直接访问',
+//                type:'line',
+//                smooth: true,
+//                data:[320, 332, 301, 334, 390, 330, 320]
+//            },
+//            {
+//                name:'搜索引擎',
+//                type:'line',
+//                smooth: true,
+//                data:[820, 932, 901, 934, 1290, 1330, 1320]
+//            }
+//        ]
+//    };
+    //左侧条纹图
+    var option = {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data: ['直接访问', '邮件营销']
+        },
+        xAxis:  {
+            axisLine: {show: false},
+            axisTick: {show: false},
+            type: 'value',
+            splitLine:{show: false},//去除网格线
+        },
+        yAxis: {
+            show: false,
+            type: 'category',
+            data: ['周一','周二','周三','周四','周五','周六','周日']
+        },
+        color: ['#ffff00','#5e53de'],
+        series: [
+            {
+                name: '直接访问',
+                type: 'bar',
+                stack: '总量',
+                barWidth: 10,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        color: '#fff'
+                    }
+                },
+                data: [320, 302, 301, 334, 390, 330, 320]
+            },
+            {
+                name: '邮件营销',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        color: '#fff'
+                    }
+                },
+                data: [120, 132, 101, 134, 90, 230, 210]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+</html>
