@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
+    //四块分别初始化
     initBox1();
     
     initBox3()
@@ -9,6 +10,7 @@ function initBox1() {
     showCharts();
 }
 function initBox3() {
+    //图表对应的数据
     var pieData1 = {
         index: 1,
         name: '一监区',
