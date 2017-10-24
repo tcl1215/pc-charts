@@ -1,0 +1,12 @@
+@charset "utf-8";
+* { margin:0; padding:0; }
+img { border:none; }
+area{outline:none;border:0px;}
+body{margin-left:0px;margin-top:0px;font-family:"Microsoft Yahei",arial,"Simsun";background-color: #1d1d1d;}
+.TipDisplay,.SmallDisplay,.ArrowDisplay{ display:none;}
+
+.Loading{position:fixed; width:272px; height:83px; top:47%; left:47%; background:url(../Images/Loading_Back.png);-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; z-index:999;}
+.Loading_Img{ position:absolute; width:61px; height:61px; left:29px; top:12px;}
+.Loading_Img img{width:100%; height:100%;}
+.Loading_Title{position:absolute;width:168px;height:42px;left:104px;top:25px;color:#FFF;font-size:25px;letter-spacing:5px;}
+.Loading_Display{ display:none;}
