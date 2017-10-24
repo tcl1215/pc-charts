@@ -1,3 +1,8 @@
+.whole {
+    float: left;
+    width: 1920px;
+    height: 1280px;
+}
 .chart-title {
     font-size: 76px;
     color: #fff;
@@ -73,5 +78,6 @@
 .bar-box {
     width: 1850px;
     height: 515px;
+    margin: 50px auto;
 }
 /*/chart 2 end*/
