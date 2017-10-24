@@ -1,12 +1,4 @@
-
-.whole_1920{transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-webkit-transform:scale(1);}
-.whole_1600{transform:scale(0.9);-moz-transform:scale(0.9);-o-transform:scale(0.9);-webkit-transform:scale(0.9);zoom:0.9; margin-top:-50px;}
-.whole_1440{transform:scale(0.87);-moz-transform:scale(0.87);-o-transform:scale(0.87);-webkit-transform:scale(0.87);zoom:0.87; margin-top:-70px;margin-left: -130px;}
-.whole_1366{transform:scale(0.87);-moz-transform:scale(0.87);-o-transform:scale(0.87);-webkit-transform:scale(0.87);zoom:0.87; margin-top:-70px;}
-.whole_1280{transform:scale(0.83);-moz-transform:scale(0.83);-o-transform:scale(0.83);-webkit-transform:scale(0.83);zoom:0.83; margin-top:-70px;}
-
-.whole{position:relative;width:100%;height:100%;background: url("../imgs/main-bg.jpg");background-size: cover;min-width: 1920px;}
-
+.whole {background: url("../imgs/main-bg.jpg");background-size: cover;}
 .Nav_Top{z-index:999;position:relative;width:100%;height: 60px;}
 .Nav_Top .logo {margin-left: 5px; float: left;}
 .Nav_Top ul{margin:0px;padding:0 0 0 60px;list-style:none; background: url("../imgs/nav-bg.png") no-repeat;width: 1029px;height: 52px;float: left;box-sizing: content-box;}

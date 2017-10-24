@@ -7,14 +7,43 @@
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/chart1.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/echarts.js"></script>
 <script type="text/javascript" src="js/Config.js"></script>
+<script type="text/javascript" src="js/chart1.js"></script>
 </head>
 <body onselectstart="return false;">
 	<div class="whole">
         <p class="chart1-title">XXX看守所基本信息</p>
 
         <div class="detail-box">
+            <ul class="score-box">
+                <li><span class="score-title">当前分值</span><span class="score current-score">99</span></li>
+                <li><span class="score-title">昨日分值</span><span class="score">99</span></li>
+                <li><span class="score-title">七日前分值</span><span class="score">99</span></li>
+            </ul>
+            <ul class="info-box">
+                <li>看守所等级：<strong>一级</strong></li>
+                <li>目前所型：<strong>中型</strong></li>
+                <li>总占地面积：<strong>30000m²</strong></li>
+                <li>监室使用面积：<strong>1235m²</strong></li>
+                <li>总建筑面积：<strong>1235m²</strong></li>
+                <li>人均面积(设计押量)：<strong>1235m²</strong></li>
+                <li>人均面积(实际用量)：<strong>16m²</strong></li>
+            </ul>
+            <ul class="info-box">
+                <li>行政级别：<strong>科级</strong></li>
+                <li>启用时间：<strong>2000.10.10</strong></li>
+                <li>是否床位制：<strong>否</strong></li>
+                <li>监室数量：<strong>123</strong></li>
+                <li>有无警力：<strong>有</strong></li>
+                <li>医疗机构：<strong class="small-ft">上海市XXX医疗机构</strong></li>
+                <li>医疗用房面积：<strong>16m²</strong></li>
+            </ul>
+        </div>
 
+        <div class="chart-box">
+            <p class="title">七日分值变化趋势</p>
+            <div id="main"></div>
         </div>
       
         <!--Loading-->
