@@ -1,10 +1,11 @@
-.chart1-title {
+.chart-title {
     font-size: 76px;
     color: #fff;
     width: 100%;
     text-align: center;
     margin-top: 40px;
 }
+/*/chart 1*/
 .detail-box {
     margin-top: 90px;
     overflow: hidden;
@@ -58,3 +59,19 @@
     width: 1850px;
     height: 320px;
 }
+/*/chart 1 end*/
+
+/*/chart 2 start*/
+.pie-box {
+    text-align: center;
+}
+.pie-chart {
+    width: 432px;
+    height: 520px;
+    display: inline-block;
+}
+.bar-box {
+    width: 1850px;
+    height: 515px;
+}
+/*/chart 2 end*/
