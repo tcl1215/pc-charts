@@ -18,7 +18,10 @@ $(document).ready(function(){
 	}else if(screen.width >= 1440){
 		//alert(1440 +":::"+ screen.width);
 		$(".whole").addClass("whole_1440");
-	}else{
+	}else if(screen.width >= 1366){
+        //alert(1336 +":::"+ screen.width);
+        $(".whole").addClass("whole_1366");
+    }else{
 		//alert(1280 +":::"+ screen.width);
 		$(".whole").addClass("whole_1280");
 	}

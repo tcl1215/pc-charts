@@ -1,9 +1,15 @@
+html {
+    background: #1e365f;
+}
 body {
     background: url("../images/chart-bg.png") no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
     color: #fff;
+}
+.whole {
+
 }
 .header {
     margin-top: 30px;
