@@ -74,4 +74,62 @@ body {
     -o-transform:rotate(29deg); 	/* Opera */
     transform-origin: 0 0;
 }
+
+.footer {
+    width: 100%;
+    float: left;
+}
+.tip-box {
+    width: 490px;
+    float: left;
+    margin-left: 20px;
+}
+.tip-box .t-title{
+    font-size: 30px;
+    line-height: 72px;
+    padding-left: 60px;
+    background: url("../images/police-icon.png") no-repeat;
+    margin: 20px 0;
+}
+.tip-box .t-title.system-title {
+    background: url("../images/system-icon.png") no-repeat -8px 8px;
+}
+.item-box li {
+    width: 320px;
+    box-sizing: content-box;
+    padding: 5px 30px;
+    margin-bottom: 20px;
+    line-height: 36px;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-left: 70px;
+    background: #358600;
+}
+.item-box li.bg-c1 {
+    background: #358600;
+}
+.item-box li.bg-c2 {
+    background: #c87e00;
+}
+.item-box li.bg-c3 {
+    background: #606060;
+}
+
+.chart-box {
+    margin-top: 120px;
+
+    overflow: hidden;
+}
+#pieChart {
+    width: 600px;
+    height: 430px;
+    float: left;
+    margin-left: 40px;
+}
+#barChart {
+    width: 580px;
+    height: 475px;
+    float: left;
+    margin-left: 120px;
+}
 /*page 1 end*/

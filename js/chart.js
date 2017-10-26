@@ -17,6 +17,8 @@ function setDetailTime() {
 function initBox1() {
     
     showRadar();
+    showPie();
+    showBar();
 }
 //页面1雷达图
 function showRadar() {
@@ -196,42 +198,47 @@ function showCharts() {
 }
 
 
-//左下角图的
-function showPie(params) {
-    var myChart = echarts.init(document.getElementById('main' + params.index));
+//饼形图
+function showPie() {
+    var myChart = echarts.init(document.getElementById('pieChart'));
     var option = {
-        title: {
-            left: 'center',
-            bottom: '10',
-            text: params.name,
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'right',
+            top:'middle',
             textStyle: {
                 color: '#fff',
-                fontSize: '36'
-            }
+                fontSize: 21
+            },
+            data: ['刑事拘留', '逮捕','公安补充侦查','审查起诉','检查补充侦查','一审','二审','发回重审理','死刑复核','待执行','已决']
         },
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-        series: [
+        series : [
             {
-                name: params.name,
-                type:'pie',
-                radius: ['50%', '70%'],
-                label: {
-                    normal: {
-                        show: true,
-                        formatter: '扣分项 \n {b}: {c}',
-                        position: 'inside',
-                        textStyle: {
-                            fontSize: '22'
-                        }
-                    }
-                },
-                data:params.data
+                type: 'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                label: { normal: {show: false}},
+                data:[
+                    {value:535, name: '刑事拘留'},
+                    {value:510, name: '逮捕'},
+                    {value:634, name: '公安补充侦查'},
+                    {value:735, name: '审查起诉'},
+                    {value:535, name: '检查补充侦查'},
+                    {value:510, name: '一审'},
+                    {value:634, name: '二审'},
+                    {value:735, name: '发回重审理'},
+                    {value:535, name: '死刑复核'},
+                    {value:510, name: '待执行'},
+                    {value:510, name: '已决'},
+                ]
             }
         ],
-        color: ['#0000ff','#ff6800','#bdbdbd','#fdbf00']
+        color: ['#ff3300', '#00ffd8', '#42ff00', '#ff6700', '#0042ff', '#f8c200', '#5096d6', '#79b553', '#1e3e78', '#925141','#d2d2d2']
     };
     myChart.setOption(option);
 }
@@ -243,9 +250,10 @@ function showBar() {
             trigger: 'axis',
         },
         grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
+            top: '2%',
+            left: '4%',
+            right: '8%',
+            bottom: '2%',
             containLabel: true
         },
         xAxis : [
@@ -255,53 +263,49 @@ function showBar() {
                     lineStyle: {color: '#fff'}
                 },
                 axisLabel: {
-                    textStyle: {fontSize: 26}
+                    show: true,
+                    color: '#fff',
+                    fontSize: 21
                 },
                 data : ['管理及时', '安防设施健康', '基础设施达标', '安防设施达标', '医疗卫生达标', '在押人员风险', '食物量','重点工作进度'],
             }
         ],
-        yAxis : [
-            {
-                type : 'value',
-                name: '（人）',
-                nameTextStyle: {fontSize: 30},
-                max: 100,
-                splitNumber:10,
-                axisLine: {
-                    lineStyle: {color: '#fff'}
-                },
-                axisTick: {
-                    show: false,
-                },
-                axisLabel: {
-                    textStyle: {fontSize: 30}
-                }
+        xAxis: {
+            type: 'value',
+            axisLabel: {
+                fontSize: 33,
+                color: '#fff'
+            },
+            axisTick: {
+                show: true,
+            },
+        },
+        yAxis: {
+            type: 'category',
+            data: ['毒品性案件','盗窃类案件','故意伤害案','诈骗类案件','其他','经济类案件','国安类案件'
+            ,'职务类案件','抢劫类案件','杀人类案件'],
+            axisLine: {
+                lineStyle: {color: '#fff'}
+            },
+            axisLabel: {
+                textStyle: {fontSize: 21}
             }
-        ],
+        },
         series : [
             {
-                name:'人数',
+                barCategoryGap: '50%',
                 type:'bar',
-                barWidth: 138,
-                barGap:  40,
-                data:[10, 52, 67, 54, 78, 98, 56, 88],
+                data:[10, 52, 67, 54, 78, 98, 56, 88, 32, 43],
                 itemStyle: {
                     normal: {
                         label: {
                             show: true,
-                            position: 'top',
+                            position: 'right',
                             color: '#fff',
-                            fontSize: 50
+                            fontSize: 25
                         },
                         
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#d0ff23'},
-                                {offset: 0.5, color: '#60ff86'},
-                                {offset: 1, color: '#00ffff'}
-                            ]
-                        )
+                        color: '#ffa800'
                     }
                 }
             }
