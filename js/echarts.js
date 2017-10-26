@@ -12996,7 +12996,7 @@ define('zrender/core/vector', [], function () {
     vector.distSquare = vector.distanceSquare;
     return vector;
 });
-define('echarts/helper', ['require', './chart/helper/createListFromArray', './util/symbol', './coord/axisHelper', './coord/axisModelCommonMixin', './model/Model', 'zrender/core/util', './data/helper/completeDimensions'], function (require) {
+define('echarts/helper', ['require', './chart-old.js/helper/createListFromArray', './util/symbol', './coord/axisHelper', './coord/axisModelCommonMixin', './model/Model', 'zrender/core/util', './data/helper/completeDimensions'], function (require) {
     var createListFromArray = require('./chart/helper/createListFromArray');
     var symbolUtil = require('./util/symbol');
     var axisHelper = require('./coord/axisHelper');

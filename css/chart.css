@@ -1,83 +1,77 @@
-.whole {
-    float: left;
-    width: 1920px;
-    height: 1280px;
-}
-.chart-title {
-    font-size: 76px;
-    color: #fff;
+body {
+    background: url("../images/chart-bg.png") no-repeat;
+    background-size: cover;
     width: 100%;
-    text-align: center;
-    margin-top: 40px;
+    height: 100%;
+    color: #fff;
 }
-/*/chart 1*/
-.detail-box {
-    margin-top: 90px;
+.header {
+    margin-top: 30px;
+    width: 100%;
     overflow: hidden;
-    font-size: 40px;
-    color: #fff;
 }
-.detail-box li {
-    margin-bottom: 20px;
-}
-.detail-box .score-box {
-    width: 520px;
+.header .h-title {
+    width: 50%;
     float: left;
-    margin-right: 20px;
-}
-.score-box .score {
-    font-size: 80px;
-}
-.score-box .score-title {
-    display: inline-block;
-    width: 250px;
-    text-align: right;
-    margin: 0 20px;
-}
-.score-box .current-score {
-    color: #ff6800;
-    font-size: 188px;
-}
-.detail-box .info-box {
-    width: 690px;
-    float: left;
-}
-.info-box .small-ft {
-    font-size: 40px;
-}
-
-.chart-box {
-    width: 1850px;
-    height: 424px;
-    margin: 70px auto 0;
-    background: #4a4a4a;
-    border: 1px solid #fff;
-}
-.chart-box .title {
-    color: #fff;
+    line-height: 64px;
+    padding-left: 86px;
+    background: url("../images/logo.png") no-repeat;
+    margin-left: 25px;
     font-size: 36px;
-    width: 100%;
-    text-align: center;
-    margin: 30px 0;
 }
-#main {
-    width: 1850px;
-    height: 320px;
+.header .current-time {
+    line-height: 64px;
+    margin-right: 76px;
+    float: right;
+    font-size: 26px;
 }
-/*/chart 1 end*/
 
-/*/chart 2 start*/
-.pie-box {
+/*page 1*/
+#radarChart {
+    width: 492px;
+    height: 360px;
+    margin-left: 60px;
+    float: left;
+}
+.table-box {
+    width: 1346px;
+    height: 340px;
+    border: 1px solid #c87e00;
+    float: left;
+    margin-top: 20px;
+    font-size: 26px;
+}
+.table-box thead {
+    background: url("../images/table-bg.png");
+    background-size: cover;
+    height: 94px;
+}
+.table-box tr {
+    height: 47px;
+    line-height: 47px;
+}
+.table-box th, .table-box td {
+    border-right: 1px solid #c87e00;
+    border-bottom: 1px solid #c87e00;
     text-align: center;
 }
-.pie-chart {
-    width: 432px;
-    height: 520px;
-    display: inline-block;
+.table-box .biaoTou {
+    position: relative;
+    width: 170px;
 }
-.bar-box {
-    width: 1850px;
-    height: 515px;
-    margin: 50px auto;
+.table-box .biaoTou:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #c87e00;
+    width: 192px;
+    height: 1px;
+    transform:rotate(29deg);
+    -ms-transform:rotate(29deg); 	/* IE 9 */
+    -moz-transform:rotate(29deg); 	/* Firefox */
+    -webkit-transform:rotate(29deg); /* Safari 和 Chrome */
+    -o-transform:rotate(29deg); 	/* Opera */
+    transform-origin: 0 0;
 }
-/*/chart 2 end*/
+/*page 1 end*/

@@ -1,0 +1,83 @@
+.whole {
+    float: left;
+    width: 1920px;
+    height: 1280px;
+}
+.chart-title {
+    font-size: 76px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+/*/chart 1*/
+.detail-box {
+    margin-top: 90px;
+    overflow: hidden;
+    font-size: 40px;
+    color: #fff;
+}
+.detail-box li {
+    margin-bottom: 20px;
+}
+.detail-box .score-box {
+    width: 520px;
+    float: left;
+    margin-right: 20px;
+}
+.score-box .score {
+    font-size: 80px;
+}
+.score-box .score-title {
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+    margin: 0 20px;
+}
+.score-box .current-score {
+    color: #ff6800;
+    font-size: 188px;
+}
+.detail-box .info-box {
+    width: 690px;
+    float: left;
+}
+.info-box .small-ft {
+    font-size: 40px;
+}
+
+.chart-box {
+    width: 1850px;
+    height: 424px;
+    margin: 70px auto 0;
+    background: #4a4a4a;
+    border: 1px solid #fff;
+}
+.chart-box .title {
+    color: #fff;
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+#main {
+    width: 1850px;
+    height: 320px;
+}
+/*/chart 1 end*/
+
+/*/chart 2 start*/
+.pie-box {
+    text-align: center;
+}
+.pie-chart {
+    width: 432px;
+    height: 520px;
+    display: inline-block;
+}
+.bar-box {
+    width: 1850px;
+    height: 515px;
+    margin: 50px auto;
+}
+/*/chart 2 end*/

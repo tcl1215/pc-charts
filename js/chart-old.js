@@ -1,79 +1,13 @@
 // JavaScript Document
 $(document).ready(function(){
-    //初始化右上角时间
-    setInterval(setDetailTime, 1000);
-    
+    //四块分别初始化
     initBox1();
+    
+    initBox3()
 })
 
-function setDetailTime() {
-    var date = new Date();
-    var str = date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日  "
-            +"星期" + "日一二三四五六".charAt(new Date().getDay()) +' '
-        + date.getHours()+":"+ (date.getMinutes().toString().length == 1 ? "0" + date.getMinutes() : date.getMinutes())
-        +":"+ (date.getSeconds().toString().length == 1 ? "0" + date.getSeconds() : date.getSeconds());
-    $(".current-time").text(str);
-}
 function initBox1() {
-    
-    showRadar();
-}
-//页面1雷达图
-function showRadar() {
-    var myChart = echarts.init(document.getElementById('radarChart'));
-    var option = {
-       tooltip: {
-           trigger: 'axis'
-       },
-       radar: [
-           {
-               name: {
-                   color: '#fff'
-               },
-               indicator: [
-                   {text: '总数', max: 35},
-                   {text: '重大一级', max: 35},
-                   {text: '重大二级', max: 35},
-                   {text: '重大三级', max: 35},
-                   {text: '紧闭', max: 35},
-                   {text: '械具', max: 35},
-                   {text: '未成年', max: 35},
-                   {text: '新收', max: 35},
-                   {text: 'WZ', max: 35}
-               ],
-               axisLine: {
-                   lineStyle: {color: '#fff'}
-               },
-               splitLine: {
-                   lineStyle: {color: '#fff'}
-               },
-               splitArea: {
-                   areaStyle: {color: 'rgba(0,0,0,0)'}
-               },
-               splitNumber: 7,
-           }
-       ],
-       series: [
-           {
-               type: 'radar',
-               tooltip: {
-                   trigger: 'item'
-               },
-               label: {
-                   normal : {show: true, color: '#fff'}
-               },
-               itemStyle: {normal: {color: '#ffff00'}},
-               lineStyle: {normal: {color: '#ffff00'}},
-               areaStyle: {normal: {color: '#ffff00', opacity: 0.2}},
-               data: [
-                   {
-                       value: [15, 20, 3, 23, 12, 15, 15,22,8]
-                   }
-               ]
-           }
-       ]
-   }
-    myChart.setOption(option);
+    showCharts();
 }
 function initBox3() {
     //图表对应的数据
