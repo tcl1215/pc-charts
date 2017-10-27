@@ -127,10 +127,9 @@ body {
     overflow: hidden;
 }
 #pieChart {
-    width: 600px;
+    width: 680px;
     height: 430px;
     float: left;
-    margin-left: 40px;
 }
 #barChart {
     width: 580px;
@@ -139,3 +138,140 @@ body {
     margin-left: 120px;
 }
 /*page 1 end*/
+
+/*page 2*/
+.count-box {
+    margin-left: 50px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.count-box .left-count {
+    width: 1114px;
+    float: left;
+}
+.count-box .main-count {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.count-box .count-info {
+    float: left;
+}
+.count-box .rt-info {
+    float: right;
+}
+.left-count .pic-box {
+    width: 100%;
+    height: 258px;
+    box-sizing: border-box;
+    border: 1px solid #c87e00;
+    border-radius: 20px;
+    text-align: center;
+    padding: 9px 0;
+}
+.left-count .pic-box li {
+    width: 160px;
+    height: 240px;
+    display: inline-block;
+    font-size: 21px;
+}
+.left-count .pic-box li + li {
+    margin-left: 10px;
+}
+.pic-box .img-box{
+    width: 100%;
+    height: 175px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background-color: #6a3906;
+    position: relative;
+}
+.pic-box .img-box img {
+    width: 100%;
+    height: 100%;
+}
+.pic-box .img-box .tag-icon {
+    width: 86px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 34px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+.pic-box .detail-box{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background-color: #535353;
+    color: #000;
+    line-height: 25px;
+    padding: 5px 0;
+}
+.pic-box .detail-box.shiqu {
+    background-color: #ff0000;
+}
+
+.pic-box .level-c1 .img-box {
+    border: 1px solid #ff0000;
+}
+.pic-box .level-c1 .detail-box {
+    border: 1px solid #ff0000;
+}
+.pic-box .level-c2 .img-box {
+    border: 1px solid #ffff00;
+}
+.pic-box .level-c2 .detail-box {
+    border: 1px solid #ffff00;
+}
+.pic-box .level-c4 .img-box {
+    border: 1px solid #00ff00;
+}
+.pic-box .level-c3 .detail-box{
+    border: 1px solid #00ff00;
+}
+.count-box .count-num {
+    font-size: 43px;
+    margin: 0 10px;
+}
+
+.count-box .right-info {
+    font-size: 26px;
+    float: right;
+    margin-right: 40px;
+}
+.count-box .right-info p {
+    width: 100%;
+    line-height: 52px;
+    height: 52px;
+}
+.right-info .pie-box {
+    width: 224px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.right-info .pie-box .pie-wrap {
+    width: 224px;
+    height: 224px;
+    margin-top: 36px;
+}
+.pie-box .percent-num {
+    line-height: 224px;
+    width: 100%;
+    height: 224px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+}
+
+.count-box .right-info .count-num {
+    font-size: 52px;
+}
+/*page 2 end*/

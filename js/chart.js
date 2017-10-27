@@ -4,6 +4,7 @@ $(document).ready(function(){
     setInterval(setDetailTime, 1000);
     
     initBox1();
+    initBox2();
 })
 
 function setDetailTime() {
@@ -15,10 +16,17 @@ function setDetailTime() {
     $(".current-time").text(str);
 }
 function initBox1() {
-    
     showRadar();
     showPie();
     showBar();
+}
+
+function initBox2() {
+    //参数二和参数三需要动态传入
+    //参数index为渲染图标索引，currentCount为当前使用，totalCount为总共使用，color需要画的颜色
+    showPercentPie(1, 8, 10, '#64c100');
+    showPercentPie(2, 9, 10, '#be111d');
+    showPercentPie(3, 7, 10, '#cdbc00');
 }
 //页面1雷达图
 function showRadar() {
@@ -310,6 +318,29 @@ function showBar() {
                 }
             }
         ]
+    };
+    myChart.setOption(option);
+}
+
+//图二的饼图
+//参数index为渲染图标索引，currentCount为当前使用，totalCount为总共使用，color需要画的颜色
+function showPercentPie(index,currentCount, totalCount, color) {
+    var myChart = echarts.init(document.getElementById('pieChart' + index));
+    var option = {
+        series : [
+            {
+                type: 'pie',
+                radius : ['40%','80%'],
+                center: ['50%', '50%'],
+                label: { normal: {show: false}},
+                labelLine: {normal: {show: false}},
+                data:[
+                    {value:currentCount},
+                    {value:totalCount - currentCount}
+                ]
+            }
+        ],
+        color: [color, '#cecece']
     };
     myChart.setOption(option);
 }
