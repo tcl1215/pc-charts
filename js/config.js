@@ -9,7 +9,10 @@ $(document).ready(function(){
 	});
 	//
 	Remove();
-	if(screen.width >= 1920){
+    if(screen.width >= 3840) {
+        //alert(3840 +":::"+ screen.width);
+    }
+	else if(screen.width >= 1920){
 		//alert(1920 +":::"+ screen.width);
 		$(".whole").addClass("whole_1920");
 	}else if(screen.width >= 1600){

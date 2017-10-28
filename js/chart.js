@@ -4,7 +4,7 @@ $(document).ready(function(){
     setInterval(setDetailTime, 1000);
     
     initBox1();
-    initBox2();
+    // initBox2();
 })
 
 function setDetailTime() {
