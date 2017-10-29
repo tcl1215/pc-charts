@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$(".Sub_Nav_Top").slideUp(0);
 	$("#ShangHai_Arrow").fadeIn(0);
 	$("#ShangHai_Small").fadeIn(0);
-	SetShangHai();
+	// SetShangHai();
 	$(".Tip_Close").click(function(){
 			$(".Tip").fadeOut(100);
 	});
@@ -28,7 +28,6 @@ $(document).ready(function(){
 		//alert(1280 +":::"+ screen.width);
 		$(".whole").addClass("whole_1280");
 	}
-	setInterval(SetTime, 1000);
 });
 function Remove()
 {
