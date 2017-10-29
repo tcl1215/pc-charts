@@ -12,6 +12,8 @@
 <script type="text/javascript" src="js/echarts.js"></script>
 <script type="text/javascript" src="js/chart1.js"></script>
 <script type="text/javascript" src="js/chart2.js"></script>
+<script type="text/javascript" src="js/chart3.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 </head>
 <body onselectstart="return false;" >
     <div class="whole main-wrap">
@@ -25,95 +27,95 @@
                 <div id="radarChart"></div>
                 <table class="table-box" border="0" cellspacing="0" cellpadding="0">
                     <thead>
-                        <tr>
-                            <th rowspan="2" class="biaoTou"></th>
-                            <th rowspan="2">总数</th>
-                            <th rowspan="2">男性</th>
-                            <th rowspan="2">女性</th>
-                            <th colspan="3">重大风险</th>
-                            <th rowspan="2">禁闭</th>
-                            <th rowspan="2">械具</th>
-                            <th rowspan="2">未成年</th>
-                            <th rowspan="2">WX</th>
-                            <th rowspan="2">新收</th>
-                        </tr>
-                        <tr>
-                            <th style="background-color: #ff0000; color: #000">一级</th>
-                            <th style="background-color: #ffff00; color: #000">二级</th>
-                            <th style="background-color: #00ff00; color: #000">三级</th>
-                        </tr>
+                    <tr>
+                        <th rowspan="2" class="biaoTou"></th>
+                        <th rowspan="2">总数</th>
+                        <th rowspan="2">男性</th>
+                        <th rowspan="2">女性</th>
+                        <th colspan="3">重大风险</th>
+                        <th rowspan="2">禁闭</th>
+                        <th rowspan="2">械具</th>
+                        <th rowspan="2">未成年</th>
+                        <th rowspan="2">WX</th>
+                        <th rowspan="2">新收</th>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #ff0000; color: #000">一级</th>
+                        <th style="background-color: #ffff00; color: #000">二级</th>
+                        <th style="background-color: #00ff00; color: #000">三级</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>全所</td>
-                            <td>800</td>
-                            <td>600</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>一中队</td>
-                            <td>800</td>
-                            <td>600</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>1</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>二中队</td>
-                            <td>800</td>
-                            <td>600</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>2</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>三中队</td>
-                            <td>800</td>
-                            <td>600</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td style="color: #ff0000">3</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>四中队</td>
-                            <td>800</td>
-                            <td>600</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td style="color: #ff0000">4</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                            <td>200</td>
-                        </tr>
+                    <tr>
+                        <td>全所</td>
+                        <td>800</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>一中队</td>
+                        <td>800</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>1</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>二中队</td>
+                        <td>800</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>三中队</td>
+                        <td>800</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td style="color: #ff0000">3</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>四中队</td>
+                        <td>800</td>
+                        <td>600</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td style="color: #ff0000">4</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                        <td>200</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -151,68 +153,101 @@
                         <p class="count-info">出所治疗：社会医院<span class="count-num">1</span>人、市监医院<span class="count-num">0</span>人</p>
                         <p class="count-info rt-info">出所住院：社会医院<span class="count-num">2</span>人、市监医院<span class="count-num">5</span>人</p>
                     </div>
-                    <ul class="pic-box">
-                        <li>
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                        <li class="level-c1">
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                        <li class="level-c2">
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                        <li class="level-c3">
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box">
-                                <img src="" alt="照片"/>
-                                <div class="tag-icon">姓名</div>
-                            </div>
-                            <div class="detail-box shiqu">
-                                <p>303/1719745</p>
-                                <p>市监医院</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="bd pic-box">
+                        <ul>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li class="level-c1">
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li class="level-c2">
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li class="level-c3">
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box shiqu">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box">
+                                    <img src="" alt="照片"/>
+                                    <div class="tag-icon">姓名</div>
+                                </div>
+                                <div class="detail-box">
+                                    <p>303/1719745</p>
+                                    <p>市监医院</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
                 <div class="right-info">
@@ -251,23 +286,35 @@
                 </div>
 
                 <div class="middle-box m2-box">
-                    <div class="m2-info-box">
+                    <div class="info-box">
                         <p class="m-title">提审/律师会见/管教谈话详情</p>
-                        <ul>
-                            <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
-                            <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
-                            <li class="item-data">外出就医：#502监室170330外出就医</li>
-                            <li class="item-data">外出就医：#502监室170330外出就医</li>
-                        </ul>
+                        <div class="bd ul-wrap">
+                            <ul>
+                                <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                                <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                                <li class="item-data">外出就医：#502监室170330外出就医</li>
+                                <li class="item-data">外出就医：#502监室170330外出就医</li>
+                                <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                                <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                                <li class="item-data">外出就医：#502监室170330外出就医</li>
+                                <li class="item-data">外出就医：#502监室170330外出就医</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="m2-info-box">
+                    <div class="info-box">
                         <p class="m-title">其他临时出所情况</p>
-                        <ul>
-                            <li class="item-data">出所开庭：#408_170321</li>
-                            <li class="item-data">出所开庭：#408_170321</li>
-                            <li class="item-data">出所开庭：#408_170321</li>
-                            <li class="item-data">出所开庭：#408_170321</li>
-                        </ul>
+                        <div class="bd ul-wrap">
+                            <ul>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                                <li class="item-data">出所开庭：#408_170321</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -280,7 +327,81 @@
         <!--图表2 end-->
 
         <!--图表3-->
-        <div class="page page3"></div>
+        <div class="page page3">
+            <div class="header">
+                <p class="h-title">虹口区看守所被监管人员违规信息</p>
+                <div class="hd-rt">15:30-16：30 集中大课程教育时间</div>
+            </div>
+
+            <div class="page3-middle">
+                <div class="line-box">
+                    <div id="lineChart"></div>
+                </div>
+                <div class="pie-box">
+                    <div class="pie-item-box">
+                        <div id="page3PieChart1" class="pie-chart"></div>
+                        <div class="score-num">89</div>
+                    </div>
+                    <div class="pie-item-box">
+                        <div id="page3PieChart2" class="pie-chart"></div>
+                        <div class="score-num">89</div>
+                    </div>
+                    <div class="pie-item-box">
+                        <div id="page3PieChart3" class="pie-chart"></div>
+                        <div class="score-num">89</div>
+                    </div>
+                    <div class="pie-item-box">
+                        <div id="page3PieChart4" class="pie-chart"></div>
+                        <div class="score-num">89</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="tip-box">
+                    <p class="t-title">管教主动预警</p>
+                    <ul class="item-box">
+                        <li class="bg-c4">威化磊：请加强对新收过度阶段对象的关注，并加强对所属民警的纠违。</li>
+                        <li class="bg-c4">威化磊：请加强对新收过度阶段对象的关注，并加强对所属民警的纠违。</li>
+                    </ul>
+                    <p class="t-title system-title">系统自动预警</p>
+                    <ul class="item-box">
+                        <li class="bg-c4">近一周WZ对象过多，请重点关注。</li>
+                    </ul>
+                </div>
+
+                <div class="chart-box">
+                    <div id="page3BarChart"></div>
+                    <div class="info-wrap">
+                        <div class="info-box">
+                            <p class="m-title">重大一、二风险对象详情</p>
+                            <div class="bd2 ul-wrap">
+                                <ul>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                    <li class="item-data">#504_172077靠墙坐，看电视</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <!--图表2 end-->
 
         <!--图表4-->
