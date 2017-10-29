@@ -4,7 +4,6 @@ $(document).ready(function(){
     setInterval(setDetailTime, 1000);
     
     initBox1();
-    // initBox2();
 })
 
 function setDetailTime() {
@@ -21,13 +20,6 @@ function initBox1() {
     showBar();
 }
 
-function initBox2() {
-    //参数二和参数三需要动态传入
-    //参数index为渲染图标索引，currentCount为当前使用，totalCount为总共使用，color需要画的颜色
-    showPercentPie(1, 8, 10, '#64c100');
-    showPercentPie(2, 9, 10, '#be111d');
-    showPercentPie(3, 7, 10, '#cdbc00');
-}
 //页面1雷达图
 function showRadar() {
     var myChart = echarts.init(document.getElementById('radarChart'));
@@ -85,126 +77,6 @@ function showRadar() {
    }
     myChart.setOption(option);
 }
-function initBox3() {
-    //图表对应的数据
-    var pieData1 = {
-        index: 1,
-        name: '一监区',
-        data: [
-            {value:335, name:'a'},
-            {value:310, name:'b'},
-            {value:234, name:'c'},
-            {value:135, name:'d'}
-        ]
-    }
-    var pieData2 = {
-        index: 2,
-        name: '二监区',
-        data: [
-            {value:335, name:'a'},
-            {value:310, name:'b'},
-            {value:234, name:'c'},
-            {value:135, name:'d'}
-        ]
-    }
-    var pieData3 = {
-        index: 3,
-        name: '三监区',
-        data: [
-            {value:335, name:'a'},
-            {value:310, name:'b'},
-            {value:234, name:'c'},
-            {value:135, name:'d'}
-        ]
-    }
-    var pieData4 = {
-        index: 4,
-        name: '四监区',
-        data: [
-            {value:335, name:'a'},
-            {value:310, name:'b'},
-            {value:234, name:'c'},
-            {value:135, name:'d'}
-        ]
-    }
-    //显示四个饼状图
-    showPie(pieData1);
-    showPie(pieData2);
-    showPie(pieData3);
-    showPie(pieData4);
-    
-    //显示柱状图
-    showBar();
-}
-
-//左上图标折线图
-function showCharts() {
-    var myChart = echarts.init(document.getElementById('main'));
-    var option = {
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            left: 'center',
-            data: ['分值'],
-            textStyle: {color: '#fff'},
-            itemWidth: 50
-        },
-        xAxis: {
-            type: 'category',
-            data: ['8.1', '8.2', '8.3', '8.4', '8.5', '8.6', '8.7'],
-            axisLine: {
-                lineStyle: {color: '#fff'}
-            },
-            splitLine: {
-                show: true,
-                lineStyle: {color: '#fff'}
-            },
-            axisLabel: {
-                textStyle: {fontSize: 32}
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        yAxis: {
-            type: 'value',
-            min: 80,
-            max: 100,
-            axisLine: {
-                lineStyle: {color: '#fff'}
-            },
-            splitLine: {
-                lineStyle: {color: '#fff'}
-            },
-            axisLabel: {
-                textStyle: {fontSize: 32}
-            }
-        },
-        series: [
-            {
-                name: '分值',
-                type: 'line',
-                data: [90,97,87,98,89,84,92],
-                symbol: 'pin',
-                symbolSize: 10,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'top',
-                        textStyle: {color: '#fff', fontSize: 24}
-                    }
-                },
-            }
-        ],
-        color: ['#0000ff']
-    };
-    myChart.setOption(option);
-}
-
 
 //饼形图
 function showPie() {
@@ -264,20 +136,6 @@ function showBar() {
             bottom: '2%',
             containLabel: true
         },
-        xAxis : [
-            {
-                type : 'category',
-                axisLine: {
-                    lineStyle: {color: '#fff'}
-                },
-                axisLabel: {
-                    show: true,
-                    color: '#fff',
-                    fontSize: 21
-                },
-                data : ['管理及时', '安防设施健康', '基础设施达标', '安防设施达标', '医疗卫生达标', '在押人员风险', '食物量','重点工作进度'],
-            }
-        ],
         xAxis: {
             type: 'value',
             axisLabel: {
@@ -318,29 +176,6 @@ function showBar() {
                 }
             }
         ]
-    };
-    myChart.setOption(option);
-}
-
-//图二的饼图
-//参数index为渲染图标索引，currentCount为当前使用，totalCount为总共使用，color需要画的颜色
-function showPercentPie(index,currentCount, totalCount, color) {
-    var myChart = echarts.init(document.getElementById('pieChart' + index));
-    var option = {
-        series : [
-            {
-                type: 'pie',
-                radius : ['40%','80%'],
-                center: ['50%', '50%'],
-                label: { normal: {show: false}},
-                labelLine: {normal: {show: false}},
-                data:[
-                    {value:currentCount},
-                    {value:totalCount - currentCount}
-                ]
-            }
-        ],
-        color: [color, '#cecece']
     };
     myChart.setOption(option);
 }

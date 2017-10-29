@@ -86,7 +86,6 @@ body {
     float: left;
 }
 .tip-box {
-    width: 490px;
     float: left;
     margin-left: 20px;
 }
@@ -101,8 +100,8 @@ body {
     background: url("../images/system-icon.png") no-repeat -8px 8px;
 }
 .item-box li {
-    width: 320px;
-    box-sizing: content-box;
+    width: 380px;
+    box-sizing: border-box;
     padding: 5px 30px;
     margin-bottom: 20px;
     line-height: 36px;
@@ -144,6 +143,7 @@ body {
     margin-left: 50px;
     font-size: 22px;
     margin-top: 10px;
+    overflow: hidden;
 }
 
 .count-box .left-count {
@@ -270,8 +270,58 @@ body {
     left: 0;
     font-size: 30px;
 }
-
 .count-box .right-info .count-num {
     font-size: 52px;
+}
+
+.middle-box {
+    float: left;
+    margin-top: 46px;
+    margin-left: 30px;
+}
+.middle-box #barChart2 {
+    width: 500px;
+    height: 270px;
+    background-color: red;
+    margin-left: 20px;
+}
+.page2 .item-box li {
+    width: 520px;
+    margin-left: 0;
+}
+.item-data {
+    padding-left: 30px;
+    background: url("../images/item-icon.png") no-repeat 0 8px;
+    line-height: 36px;
+}
+.m2-box {
+    margin-left: 40px;
+}
+.m2-box .m2-info-box {
+    margin-bottom: 30px;
+}
+.m2-box .m2-info-box .m-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.m2-box ul {
+    width: 560px;
+    border: 1px solid #c87e00;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 25px;
+}
+.m2-box .item-data {
+    margin-bottom: 10px;
+}
+.m3-box {
+    margin-left: 50px;
+}
+.m3-box #barChart3 {
+    width: 666px;
+    height: 580px;
+    background-color: yellow;
 }
 /*page 2 end*/

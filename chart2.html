@@ -9,15 +9,12 @@
 <link href="css/chart.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/echarts.js"></script>
-<script type="text/javascript" src="js/chart.js"></script>
+<script type="text/javascript" src="js/chart2.js"></script>
 </head>
 <body onselectstart="return false;">
-	<div class="whole">
+	<div class="whole page2">
         <div class="header">
             <p class="h-title">虹口区看守所被监管人员动态信息</p>
-        </div>
-        <div class="box">
-
         </div>
         <div class="count-box">
             <div class="left-count">
@@ -109,121 +106,47 @@
             </div>
         </div>
         <div class="middle">
-            <div id="radarChart"></div>
-            <table class="table-box" border="0" cellspacing="0" cellpadding="0">
-                <thead>
-                    <tr>
-                        <th rowspan="2" class="biaoTou"></th>
-                        <th rowspan="2">总数</th>
-                        <th rowspan="2">男性</th>
-                        <th rowspan="2">女性</th>
-                        <th colspan="3">重大风险</th>
-                        <th rowspan="2">禁闭</th>
-                        <th rowspan="2">械具</th>
-                        <th rowspan="2">未成年</th>
-                        <th rowspan="2">WX</th>
-                        <th rowspan="2">新收</th>
-                    </tr>
-                    <tr>
-                        <th style="background-color: #ff0000; color: #000">一级</th>
-                        <th style="background-color: #ffff00; color: #000">二级</th>
-                        <th style="background-color: #00ff00; color: #000">三级</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>全所</td>
-                        <td>800</td>
-                        <td>600</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>一中队</td>
-                        <td>800</td>
-                        <td>600</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>1</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>二中队</td>
-                        <td>800</td>
-                        <td>600</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>2</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>三中队</td>
-                        <td>800</td>
-                        <td>600</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td style="color: #ff0000">3</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>四中队</td>
-                        <td>800</td>
-                        <td>600</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td style="color: #ff0000">4</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                        <td>200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="footer">
-            <div class="tip-box">
-                <p class="t-title">所领导工作提示</p>
-                <ul class="item-box">
-                    <li class="bg-c1">威化磊：请加强对新收过度阶段对象的关注，并加强对所属民警的纠违。</li>
-                    <li class="bg-c2">威化磊：请加强对新收过度阶段对象的关注，并加强对所属民警的纠违。</li>
-                </ul>
-                <p class="t-title system-title">系统自动提示</p>
-                <ul class="item-box">
-                    <li class="bg-c3">近一周WZ对象过多，请重点关注。</li>
-                </ul>
+            <div class="middle-box m1-box">
+                <div id="barChart2"></div>
+                <div class="tip-box">
+                    <p class="t-title system-title">系统自动提示</p>
+                    <ul class="item-box">
+                        <li class="bg-c3">
+                            <p class="item-data">请加强对社会医院就医对象情况的督导！</p>
+                            <p class="item-data">律师会见室负荷过大，请加强情况掌控！</p>
+                            <p class="item-data"></p>
+                            <p class="item-data"></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="chart-box">
-                <div id="pieChart"></div>
-                <div id="barChart"></div>
+            <div class="middle-box m2-box">
+                <div class="m2-info-box">
+                    <p class="m-title">提审/律师会见/管教谈话详情</p>
+                    <ul>
+                        <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                        <li class="item-data">管教谈话：张大山对#408监室170218谈话</li>
+                        <li class="item-data">外出就医：#502监室170330外出就医</li>
+                        <li class="item-data">外出就医：#502监室170330外出就医</li>
+                    </ul>
+                </div>
+                <div class="m2-info-box">
+                    <p class="m-title">其他临时出所情况</p>
+                    <ul>
+                        <li class="item-data">出所开庭：#408_170321</li>
+                        <li class="item-data">出所开庭：#408_170321</li>
+                        <li class="item-data">出所开庭：#408_170321</li>
+                        <li class="item-data">出所开庭：#408_170321</li>
+                    </ul>
+                </div>
             </div>
 
+            <div class="middle-box m3-box">
+                <div id="barChart3"></div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
