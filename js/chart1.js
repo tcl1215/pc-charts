@@ -90,6 +90,7 @@ function showPie() {
             orient: 'vertical',
             left: 'right',
             top:'middle',
+            align: 'left',
             textStyle: {
                 color: '#fff',
                 fontSize: 21
