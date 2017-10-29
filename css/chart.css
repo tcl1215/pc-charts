@@ -31,6 +31,12 @@ body {
     float: right;
     font-size: 26px;
 }
+.header .hd-rt {
+    line-height: 64px;
+    margin-right: 76px;
+    float: right;
+    font-size: 26px;
+}
 
 /*page 1*/
 #radarChart {
@@ -281,8 +287,7 @@ body {
 }
 .middle-box #barChart2 {
     width: 500px;
-    height: 270px;
-    background-color: red;
+    height: 300px;
     margin-left: 20px;
 }
 .page2 .item-box li {
@@ -310,8 +315,9 @@ body {
     border: 1px solid #c87e00;
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 18px 20px;
+    padding: 18px 20px 8px;
     font-size: 25px;
+    background-color: #3a4a66;
 }
 .m2-box .item-data {
     margin-bottom: 10px;
@@ -322,6 +328,5 @@ body {
 .m3-box #barChart3 {
     width: 666px;
     height: 580px;
-    background-color: yellow;
 }
 /*page 2 end*/

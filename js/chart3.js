@@ -1,17 +1,10 @@
 // JavaScript Document
 $(document).ready(function(){
-    initBox2();
+    initBox3();
 })
 
-function initBox2() {
-    //参数二和参数三需要动态传入
-    //参数index为渲染图标索引，currentCount为当前使用，totalCount为总共使用，color需要画的颜色
-    showPercentPie(1, 8, 10, '#64c100');
-    showPercentPie(2, 9, 10, '#be111d');
-    showPercentPie(3, 7, 10, '#cdbc00');
+function initBox3() {
     
-    showPage2Bar();
-    showPage2Bar2();
 }
 
 //图二的饼图
