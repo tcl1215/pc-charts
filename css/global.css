@@ -28,7 +28,7 @@ li {
 }
 .main-wrap .page {
     position:relative;
-    height: 1080px;width: 3840px;float: left;
+    height: 1080px;width: 1920px;float: left;
 }
 .main-wrap.whole_1920{transform:scale(0.5);-moz-transform:scale(0.5);-o-transform:scale(0.5);-webkit-transform:scale(0.5);transform-origin: 0 0;}
 .main-wrap.whole_1600{transform:scale(0.417);-moz-transform:scale(0.417);-o-transform:scale(0.417);-webkit-transform:scale(0.417);transform-origin: 0 0;}
