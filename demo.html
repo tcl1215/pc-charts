@@ -14,12 +14,103 @@
 <script type="text/javascript" src="js/echarts.js"></script>
 </head>
 <body onselectstart="return false;">
-	<div class="whole">
-        <div id="main" style="width: 600px;height:400px;"></div>
+	<div class="">
+        <!--small-->
+        <div id="ShangHai_Small" class = "middle-small-map">
+            <div class="small-map">
+                <div style="z-index: 10;position: absolute">
+                    <img src="imgs/maps/small-blank-bg.png" border="1" usemap="#Map2" class="img-bg"/>
+                    <map name="Map2" id="Map2">
+                        <!--杨浦区-->
+                        <area class="MapClick" id="yangpu" shape="poly" coords="295,27,320,36,348,54,364,72,358,95,359,106,361,113,366,120,362,142,349,155,314,172,290,168,277,140,276,133,266,112,277,97,259,90,260,59,281,59,282,39,291,34,295,27"/>
+                        <!--虹口区-->
+                        <area class="MapClick" id="hongkou" shape="poly" coords="222,46,252,54,252,94,266,97,259,113,280,167,254,168,246,172,248,162,217,112,222,79,222,46"/>
+                        <!--普陀区-->
+                        <area class="MapClick" id="putuo" shape="poly" coords="55,81,84,94,96,90,114,90,120,97,126,106,133,107,144,116,160,108,180,123,181,127,186,136,179,156,154,167,100,176,70,162,90,146,86,134,89,111,48,100,43,87,55,81"/>
+                        <!--长宁区-->
+                        <area class="MapClick" id="changning" shape="poly" coords="64,169,72,175,85,175,94,181,141,178,152,185,152,193,159,200,154,202,153,216,127,228,95,214,80,220,46,211,42,198,60,188,64,169"/>
+                        <!--徐汇区-->
+                        <area class="MapClick" id="xuhui" shape="poly" coords="122,238,133,237,140,229,160,223,160,210,168,205,186,206,204,247,184,290,168,318,180,352,168,364,154,324,128,326,105,278,88,262,98,252,123,252,125,243,122,238"/>
+                        <!--静安区-->
+                        <area class="MapClick"  id="jingan" shape="poly" coords="213,43,215,76,210,111,241,162,240,172,211,172,204,167,206,186,190,189,184,198,166,199,158,193,158,182,150,176,155,172,185,166,190,144,194,142,188,119,161,104,158,90,133,66,148,50,176,46,184,34,213,43"/>
+                        <!--黄埔区-->
+                        <area class="MapClick" id="huangpu" shape="poly" coords="212,178,244,178,246,194,244,192,263,220,239,252,213,252,202,218,204,212,193,204,194,196,212,192,212,178"/>
+                    </map>
+                </div>
+
+
+                <!--小地图-->
+                <div id="yangpuMap" class="map-cover" style="left: 247px; top: 17px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/yangpu-green.png"></div>
+                    <div class="small-map-title" style="left: 42px; top: 66px;">杨浦区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 75px; top: 32px;">-->
+                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="putuoMap" class="map-cover" style="left: 32px; top: 68px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/putuo-green.png"></div>
+                    <div class="small-map-title" style="left: 73px; top: 60px;">普陀区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 4px; top: -21px;">-->
+                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+
+                <div id="hongkouMap" class="map-cover" style="left: 207px; top: 38px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/hongkou-green.png"></div>
+                    <div class="small-map-title" style="left: 25px; top: 30px;">
+                        虹<br/>口<br/>区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 26px; top: -16px;">-->
+                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="jinganMap" class="map-cover" style="left: 122px; top: 25px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/jingan-green.png"></div>
+                    <div class="small-map-title" style="left: 70px; top: 55px;">
+                        静<br/>安<br/>区
+                    </div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 24px; top: 0px;">-->
+                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+                <div id="changningMap" class="map-cover" style="left: 30px; top: 156px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/changning-green.png"></div>
+                    <div class="small-map-title" style="left: 43px; top: 30px;">长宁区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 50px; top: -10px;">-->
+                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
+                    <!--</div>-->
+                </div>
+                <div id="huangpuMap" class="map-cover" style="left: 182px; top: 163px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/huangpu-green.png"></div>
+                    <div class="small-map-title" style="left: 33px; top: 16px;">
+                        黄<br/>浦<br/>区
+                    </div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 38px; top: 3px;">-->
+                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+                <div id="xuhuiMap" class="map-cover" style="left: 78px; top: 193px;">
+                    <div class="small-map-img"><img src="imgs/maps/area/xuhui-green.png"></div>
+                    <div class="small-map-title" style="left: 44px; top: 66px;">徐汇区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 31px; top: 23px;">-->
+                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
+                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script type="application/javascript">
-    var myChart = echarts.init(document.getElementById('main'));
+//    var myChart = echarts.init(document.getElementById('main'));
     // 指定图表的配置项和数据
 //    var option = {
 //        tooltip: {
@@ -171,6 +262,6 @@
             }
         ]
     };
-    myChart.setOption(option);
+//    myChart.setOption(option);
 </script>
 </html>

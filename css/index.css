@@ -94,14 +94,6 @@
     clear: both;
 }
 
-.small-map {
-    width: 402px;
-    height: 394px;
-    position: absolute;
-    background: url("../imgs/small-bg.png") no-repeat center;
-    left: 10px;
-    top: 46px;
-}
 .main-kss {
     width: 298px;
     height: 207px;
@@ -124,13 +116,21 @@
 .Big_Map_Value_Img img{ width:100%; height:100%;}
 .Big_Map_Value_Title{text-align:center;color:#FFF;font-size:16px;position:absolute;top:5px;left:0px;width:100%;height:100%;}
 
-.Middle_Small_Map{position:absolute; top:-15px; left:0px;width:1594px; height:805px;}
-.Small_Map{position:absolute;width:371px;height:325px;z-index:5;left: 1152px;top: 52px;}
-.Small_Map img{width:371px;height:325px;}
-
-.Small_Top{ position:absolute; top:0px;z-index:1;}
-.Small_Map_Img{ position:absolute; top:0px; left:0px; width:200px; height:200px; z-index:1}
-.Small_Map_Title{color:#000; font-size:15px; font-weight:bold;}
+.small-map {
+    width: 402px;
+    height: 394px;
+    position: absolute;
+    background: url("../imgs/small-bg.png") no-repeat center;
+    margin-top: 10px;
+}
+.small-map .img-bg{width: 100%; height: 100%; }
+.small-map .map-cover {
+    position: absolute;
+    width:200px;
+    height:200px;
+}
+.small-map-img{ position:absolute; top:0px; left:0px; width:200px; height:200px; z-index:1}
+.small-map-title{color:#fff; font-size:18px; font-weight:bold; position: absolute;z-index: 2;font-weight: normal;}
 
 
 .Tip{position:absolute;width:533px;height:432px;top:0;right:0;background:url(../imgs/tip-bg.png); z-index:999;}
