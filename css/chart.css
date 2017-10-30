@@ -416,7 +416,6 @@ body {
     width: 284px;
     text-align: center;
     top: 84px;
-    z-index: -100;
 }
 .page3 .pie-item-box + .pie-item-box {
     margin-left: 85px;
