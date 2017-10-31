@@ -15,97 +15,124 @@
 </head>
 <body onselectstart="return false;">
 	<div class="">
-        <!--small-->
-        <div id="ShangHai_Small" class = "middle-small-map">
-            <div class="small-map">
+            <div class="big-map">
                 <div style="z-index: 10;position: absolute">
-                    <img src="imgs/maps/small-blank-bg.png" border="1" usemap="#Map2" class="img-bg"/>
-                    <map name="Map2" id="Map2">
-                        <!--杨浦区-->
-                        <area class="MapClick" id="yangpu" shape="poly" coords="295,27,320,36,348,54,364,72,358,95,359,106,361,113,366,120,362,142,349,155,314,172,290,168,277,140,276,133,266,112,277,97,259,90,260,59,281,59,282,39,291,34,295,27"/>
-                        <!--虹口区-->
-                        <area class="MapClick" id="hongkou" shape="poly" coords="222,46,252,54,252,94,266,97,259,113,280,167,254,168,246,172,248,162,217,112,222,79,222,46"/>
-                        <!--普陀区-->
-                        <area class="MapClick" id="putuo" shape="poly" coords="55,81,84,94,96,90,114,90,120,97,126,106,133,107,144,116,160,108,180,123,181,127,186,136,179,156,154,167,100,176,70,162,90,146,86,134,89,111,48,100,43,87,55,81"/>
-                        <!--长宁区-->
-                        <area class="MapClick" id="changning" shape="poly" coords="64,169,72,175,85,175,94,181,141,178,152,185,152,193,159,200,154,202,153,216,127,228,95,214,80,220,46,211,42,198,60,188,64,169"/>
-                        <!--徐汇区-->
-                        <area class="MapClick" id="xuhui" shape="poly" coords="122,238,133,237,140,229,160,223,160,210,168,205,186,206,204,247,184,290,168,318,180,352,168,364,154,324,128,326,105,278,88,262,98,252,123,252,125,243,122,238"/>
-                        <!--静安区-->
-                        <area class="MapClick"  id="jingan" shape="poly" coords="213,43,215,76,210,111,241,162,240,172,211,172,204,167,206,186,190,189,184,198,166,199,158,193,158,182,150,176,155,172,185,166,190,144,194,142,188,119,161,104,158,90,133,66,148,50,176,46,184,34,213,43"/>
-                        <!--黄埔区-->
-                        <area class="MapClick" id="huangpu" shape="poly" coords="212,178,244,178,246,194,244,192,263,220,239,252,213,252,202,218,204,212,193,204,194,196,212,192,212,178"/>
+                    <img src="imgs/maps/big-test-bg.png" border="0" usemap="#Map" class="img-bg"/>
+                    <map name="Map" id="Map">
+                        <!--崇明区-->
+                        <area class="MapClick" id="congming" shape="poly" coords="250,26,287,10,316,9,380,36,397,52,467,79,534,94,579,104,592,128,576,156,554,158,453,122,446,126,343,89,301,60,270,48" />
+                        <!--嘉定区-->
+                        <area class="MapClick" id="jiading" shape="poly" coords="295,137,300,142,300,152,310,163,300,176,309,194,305,201,311,209,301,225,308,237,316,239,322,248,328,248,317,253,307,252,300,259,287,258,283,252,270,243,263,243,251,241,244,246,232,246,218,238,213,239,218,229,204,221,207,207,201,200,195,194,200,186,211,187,223,173,222,167,229,161,224,155,238,154,251,143,259,145,265,136,270,145"/>
+                        <!--宝山区-->
+                        <area class="MapClick" id="baoshan" shape="poly" coords="299,134,308,134,323,138,332,138,340,148,361,156,379,173,386,173,398,181,393,191,398,201,390,206,388,215,381,214,368,214,355,221,353,235,354,239,340,226,332,224,330,227,320,221,312,224,319,214,316,203,312,200,314,195,307,181,304,176,307,174,311,174,315,166,314,161,307,149,300,138,299,135"/>
+
+                        <area class="MapClick" id="baoshan2" shape="poly" coords="432,158,467,163,514,179,533,196,542,211,533,216,510,194"/>
+                        <area class="MapClick" id="baoshan3" shape="poly" coords="544,187,586,198,591,212,583,225,557,216"/>
+                        <!--上海市区-->
+                        <area id="ShangHai" class="NoClick" shape="poly" coords="407,204,402,209,398,206,393,214,393,220,388,224,381,220,373,219,365,220,360,224,358,233,360,240,350,246,341,239,338,230,331,233,322,232,319,227,314,231,313,235,323,237,326,243,334,245,335,253,330,258,325,257,314,259,313,272,310,283,322,283,338,280,348,280,353,286,347,291,342,295,348,302,356,316,365,315,369,322,375,327,375,331,378,321,371,313,375,303,375,291,381,283,391,280,399,269,390,257,395,251,412,248,426,239,428,234,424,224,421,212,408,206"/>
+                        <!--闵行区-->
+                        <area class="MapClick" id="minhang" shape="poly" coords="309,262,288,265,279,257,269,250,267,257,276,276,286,274,298,289,310,312,320,324,331,348,326,351,308,365,304,388,309,394,301,409,314,415,343,407,368,395,394,389,403,393,401,398,415,394,435,406,443,397,446,389,434,392,433,386,437,381,436,373,425,376,425,364,434,351,427,347,429,341,438,337,432,334,423,335,418,330,409,330,400,330,394,326,386,331,378,335,369,337,367,331,362,329,363,325,364,321,355,321,351,321,346,313,342,305,340,301,337,296,337,290,344,287,332,285,322,289,317,290,311,293,307,290,305,285,307,279,307,272,309,266,309,263"/>
+                        <!--青浦区-->
+                        <area class="MapClick" id="qingpu" shape="poly" coords="259,246,250,247,246,251,241,248,232,251,218,243,214,248,210,240,210,237,195,233,188,237,182,232,173,240,163,269,163,300,154,305,145,305,140,313,129,312,110,315,83,313,65,316,48,318,35,328,54,340,49,360,45,372,42,384,39,390,53,392,70,386,70,375,77,385,94,389,96,401,97,415,90,423,90,432,96,437,100,435,103,440,115,430,115,422,126,421,135,432,147,423,154,404,158,393,153,384,158,376,153,368,152,361,160,355,165,360,174,360,178,359,168,351,166,350,166,338,168,333,177,326,184,329,189,328,196,335,207,327,215,320,219,308,231,310,245,307,245,315,242,323,253,313,270,311,273,305,281,298,292,296,296,295,290,287,283,279,276,281,266,272,262,258,260,248"/>
+                        <!--松江区-->
+                        <area class="MapClick" id="songjiang"  shape="poly" coords="297,303,283,303,278,309,280,314,272,318,262,317,257,319,250,327,239,329,236,323,239,316,230,317,221,315,222,324,210,336,199,344,188,337,177,333,172,338,172,344,179,350,184,362,173,366,164,368,160,363,162,375,165,380,160,385,162,395,162,406,155,421,153,428,138,436,128,435,124,429,118,436,111,443,110,455,102,467,121,467,140,468,142,459,156,456,165,459,163,468,172,471,171,459,174,457,182,461,190,455,199,460,218,456,228,449,247,459,253,467,266,475,271,461,279,459,280,464,290,465,298,465,308,463,311,452,317,444,318,422,309,422,302,417,294,413,298,403,304,393,298,388,303,368,304,357,311,358,318,354,322,344,314,339,310,329,311,322,298,305"/>
+                        <!--浦东区-->
+                        <area class="MapClick" id="pudong" shape="poly" coords="404,184,436,192,458,202,493,223,517,239,523,249,533,258,569,301,615,355,657,412,674,452,677,485,665,501,650,506,643,513,625,505,610,508,593,513,592,481,592,470,592,459,585,450,567,437,543,417,513,406,483,404,461,397,448,398,449,385,441,383,441,372,432,367,428,368,434,358,445,348,434,345,442,339,438,330,430,329,423,325,416,322,409,324,393,318,382,327,377,311,381,291,393,284,405,271,395,258,417,252,432,240,432,228,429,217,420,204,401,197,396,191"/>
+                        <!--奉贤区-->
+                        <area class="MapClick" id="fengxian" shape="poly" coords="586,455,554,431,533,417,503,410,480,409,458,403,442,407,436,413,414,404,412,399,402,405,396,400,394,395,385,397,373,400,362,406,345,413,326,418,323,436,322,447,316,453,316,466,321,484,333,492,333,509,334,521,337,530,346,527,352,531,347,537,357,544,370,541,382,557,391,575,432,552,431,542,437,538,444,539,456,537,465,531,503,524,586,514,588,478,585,457"/>
+                        <!--金山区-->
+                        <area class="MapClick" id="jinshan" shape="poly" coords="90,440,96,441,100,446,106,444,104,452,98,463,103,472,119,474,133,472,142,476,148,471,146,465,150,460,158,461,158,468,153,475,156,479,168,475,174,474,176,467,178,463,182,469,187,464,193,466,203,466,223,459,230,455,241,462,243,468,254,473,263,481,272,479,274,470,275,466,284,470,289,474,296,471,305,473,311,467,319,486,331,494,329,514,327,523,338,538,343,537,355,547,364,546,371,550,386,576,369,580,369,587,360,595,356,591,321,634,306,645,302,649,296,649,295,657,250,661,247,648,249,621,224,601,221,580,211,569,187,583,161,575,152,581,163,530,155,527,154,515,145,512,137,510,129,515,115,515,95,544,89,528,81,527,64,538,67,528,88,507,93,491,87,486,76,485,79,475,86,469,85,464"/>
                     </map>
                 </div>
 
-
-                <!--小地图-->
-                <div id="yangpuMap" class="map-cover" style="left: 247px; top: 17px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/yangpu-green.png"></div>
-                    <div class="small-map-title" style="left: 42px; top: 66px;">杨浦区</div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 75px; top: 32px;">-->
-                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                <!--大地图-->
+                <div id="baoshanMap" class="map-cover" style="position:absolute; z-index:1; left: 646px; top: 152px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/BaoShan_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 49px; top: 56px;">宝山区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 60px; top: 10px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
                     <!--</div>-->
                 </div>
 
-                <div id="putuoMap" class="map-cover" style="left: 32px; top: 68px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/putuo-green.png"></div>
-                    <div class="small-map-title" style="left: 73px; top: 60px;">普陀区</div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 4px; top: -21px;">-->
-                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
+                <div id="songjiangMap" class="map-cover" style="position:absolute; z-index:1; left: 464px; top: 310px; width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/SongJiang_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 120px; top: 107px;">松江区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 129px; top: 60px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="fengxianMap" class="map-cover" style="position:absolute; z-index:1; left: 655px; top: 394px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/FengXian_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 131px; top: 99px;">奉贤区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 144px; top: 51px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="jiadingMap" class="map-cover" style="position:absolute; z-index:1; left: 552px; top: 150px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/JiaDing_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 59px; top: 77px;">嘉定区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 53px; top: 30px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="jinshanMap" class="map-cover" style="position:absolute; z-index:1; left: 426px; top: 461px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/JinShan_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 174px; top: 101px;">金山区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 184px; top: 57px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="pudongMap" class="map-cover" style="position:absolute; z-index:1; left: 717px; top: 187px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/PuDong_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 153px; top: 168px;">浦东区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 161px; top: 119px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
+                    <!--</div>-->
+                </div>
+
+                <div id="shanghaiMap" class="map-cover" style="position:absolute; z-index:1; left: 670px; top: 222px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/ShangHai_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 30px; top: 68px;">上海市区</div>
+                </div>
+
+                <div id="minhangMap" class="map-cover" style="position:absolute; z-index:1; left: 613px; top: 254px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/MinHang_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 102px; top: 134px;">闵行区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 109px; top: 87px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
                     <!--</div>-->
                 </div>
 
 
-                <div id="hongkouMap" class="map-cover" style="left: 207px; top: 38px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/hongkou-green.png"></div>
-                    <div class="small-map-title" style="left: 25px; top: 30px;">
-                        虹<br/>口<br/>区</div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 26px; top: -16px;">-->
-                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+                <div id="qingpuMap" class="map-cover" style="position:absolute; z-index:1; left: 392px; top: 226px;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/QingPu_Green.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 68px; top: 149px;">青浦区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 74px; top: 100px;">-->
+                        <!--<div class="Big_Map_Value_Img"><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
                     <!--</div>-->
                 </div>
 
-                <div id="jinganMap" class="map-cover" style="left: 122px; top: 25px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/jingan-green.png"></div>
-                    <div class="small-map-title" style="left: 70px; top: 55px;">
-                        静<br/>安<br/>区
-                    </div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 24px; top: 0px;">-->
-                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title">10人</div>-->
+
+                <div id="congmingMap" class="BigMap_Shadow" style="position:absolute; z-index:1; left: 612px; top: 22px ;width:500px; height:500px;">
+                    <div class="big-map-img"><img src="Images/ShangHaiMap/CongMing_Gray.png"></div>
+                    <div class="big-map-title" style="position:absolute; z-index:2; left: 139px; top: 82px;">崇明区</div>
+                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 146px; top: 34px;">-->
+                        <!--<div class="Big_Map_Value_Img "><img src="Images/Tip.png"></div>-->
+                        <!--<div class="Big_Map_Value_Title">10人</div>-->
                     <!--</div>-->
                 </div>
-                <div id="changningMap" class="map-cover" style="left: 30px; top: 156px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/changning-green.png"></div>
-                    <div class="small-map-title" style="left: 43px; top: 30px;">长宁区</div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 50px; top: -10px;">-->
-                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
-                    <!--</div>-->
-                </div>
-                <div id="huangpuMap" class="map-cover" style="left: 182px; top: 163px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/huangpu-green.png"></div>
-                    <div class="small-map-title" style="left: 33px; top: 16px;">
-                        黄<br/>浦<br/>区
-                    </div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 38px; top: 3px;">-->
-                    <!--<div class="Big_Map_Value_Img"><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title">10人</div>-->
-                    <!--</div>-->
-                </div>
-                <div id="xuhuiMap" class="map-cover" style="left: 78px; top: 193px;">
-                    <div class="small-map-img"><img src="imgs/maps/area/xuhui-green.png"></div>
-                    <div class="small-map-title" style="left: 44px; top: 66px;">徐汇区</div>
-                    <!--<div class="Big_Map_Value" style="position:absolute; z-index:4; left: 31px; top: 23px;">-->
-                    <!--<div class="Big_Map_Value_Img "><img src="Images/old/Tip.png"></div>-->
-                    <!--<div class="Big_Map_Value_Title ">10人</div>-->
-                    <!--</div>-->
-                </div>
-            </div>
         </div>
     </div>
 </body>
