@@ -23,14 +23,14 @@
                         <!--嘉定区-->
                         <area class="MapClick" id="jiading" shape="poly" coords="282,135,295,136,304,132,324,128,329,124,334,128,368,125,382,146,372,149,387,188,374,199,389,216,398,214,402,222,362,227,340,212,288,210,268,202,256,186,256,173,246,166,278,150,282,135"/>
                         <!--宝山区-->
-                        <area class="MapClick" id="baoshan" shape="poly" coords=""/>
+                        <area class="MapClick" id="baoshan" shape="poly" coords="382,120,418,128,476,160,500,167,500,182,488,193,463,191,445,200,443,210,424,199,400,194,387,156,397,145,382,120"/>
 
-                        <area class="MapClick" id="baoshan2" shape="poly" coords=""/>
-                        <area class="MapClick" id="baoshan3" shape="poly" coords=""/>
+                        <area class="MapClick" id="baoshan2" shape="poly" coords="557,150,646,169,690,194,692,204,682,204,630,177,557,150"/>
+                        <area class="MapClick" id="baoshan3" shape="poly" coords="704,186,751,196,757,206,746,216,718,208,704,186"/>
                         <!--上海市区-->
                         <area id="shiqu" class="NoClick" shape="poly" coords=""/>
                         <!--闵行区-->
-                        <area class="MapClick" id="minhang" shape="poly" coords=""/>
+                        <area class="MapClick" id="minhang" shape="poly" coords="334,219,346,224,356,232,386,234,380,249,392,260,425,255,450,290,458,288,458,296,476,306,502,295,552,304,544,312,550,318,540,338,558,339,552,352,568,352,554,364,531,353,513,354,513,348,453,356,392,366,384,360,394,348,386,340,391,325,420,310,360,240,345,240,334,219"/>
                         <!--青浦区-->
                         <area class="MapClick" id="qingpu" shape="poly" coords=""/>
                         <!--松江区-->
@@ -189,110 +189,5 @@
 //            }
 //        ]
 //    };
-    //底部曲线图
-//    var option = {
-//        tooltip: {
-//            trigger: 'axis'
-//        },
-//        legend: {
-//            data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-//        },
-//        xAxis: {
-//            type: 'category',
-//            boundaryGap: false,
-//            data: ['周一','周二','周三','周四','周五','周六','周日']
-//        },
-//        yAxis: {
-//            type: 'value',
-//            splitLine:{show: false},//去除网格线
-//        },
-//        series: [
-//            {
-//                name:'邮件营销',
-//                type:'line',
-//                smooth: true,
-//                data:[120, 132, 101, 134, 90, 230, 210]
-//            },
-//            {
-//                name:'联盟广告',
-//                type:'line',
-//                smooth: true,
-//                data:[220, 182, 191, 234, 290, 330, 310]
-//            },
-//            {
-//                name:'视频广告',
-//                type:'line',
-//                smooth: true,
-//                data:[150, 232, 201, 154, 190, 330, 410]
-//            },
-//            {
-//                name:'直接访问',
-//                type:'line',
-//                smooth: true,
-//                data:[320, 332, 301, 334, 390, 330, 320]
-//            },
-//            {
-//                name:'搜索引擎',
-//                type:'line',
-//                smooth: true,
-//                data:[820, 932, 901, 934, 1290, 1330, 1320]
-//            }
-//        ]
-//    };
-    //左侧条纹图
-    var option = {
-        tooltip : {
-            trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        legend: {
-            data: ['直接访问', '邮件营销']
-        },
-        xAxis:  {
-            axisLine: {show: false},
-            axisTick: {show: false},
-            type: 'value',
-            splitLine:{show: false},//去除网格线
-        },
-        yAxis: {
-            show: false,
-            type: 'category',
-            data: ['周一','周二','周三','周四','周五','周六','周日']
-        },
-        color: ['#ffff00','#5e53de'],
-        series: [
-            {
-                name: '直接访问',
-                type: 'bar',
-                stack: '总量',
-                barWidth: 10,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'top',
-                        color: '#fff'
-                    }
-                },
-                data: [320, 302, 301, 334, 390, 330, 320]
-            },
-            {
-                name: '邮件营销',
-                type: 'bar',
-                stack: '总量',
-                barWidth: 10,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'top',
-                        color: '#fff'
-                    }
-                },
-                data: [120, 132, 101, 134, 90, 230, 210]
-            }
-        ]
-    };
-//    myChart.setOption(option);
 </script>
 </html>

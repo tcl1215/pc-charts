@@ -7,10 +7,12 @@
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/echarts.js"></script>
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/SetNavigation.js"></script>
 <script type="text/javascript" src="js/SetSub_Nav.js"></script>
 <script type="text/javascript" src="js/setMap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body onselectstart="return false;">
 	<div class="whole">
@@ -35,6 +37,7 @@
     	<div class="middle">
             <div class="left-box">
                 <span class="c-title">押金/风险情况</span>
+                <div id="leftBar"></div>
             </div>
             <div class="main-box">
                 <ul class="filter-box">
@@ -168,7 +171,10 @@
 
         </div>
 
-        <div class="bottom-box"></div>
+        <div class="bottom-box">
+            <span class="c-title">综合排行变化情况</span>
+            <div id="btmLine"></div>
+        </div>
 
         <!--Loading-->
         <div class="loading loading-display">

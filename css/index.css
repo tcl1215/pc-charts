@@ -21,8 +21,12 @@
     float: left;
     background: url("../imgs/left-bg.png") no-repeat;
     margin-left: 25px;
-    margin-top:36px;
+    margin-top:28px;
     position: relative;
+}
+.left-box #leftBar {
+    width: 339px;
+    height: 716px;
 }
 .middle .main-box {
     width: 1190px;
@@ -49,8 +53,8 @@
     border-radius: 100%;
     content: '';
     position: absolute;
-    left: 15px;
-    top: 6px;
+    left: 14px;
+    top: 4px;
 }
 .main-box .filter-box li + li{
     border-left: 2px solid #0086ff;
@@ -73,16 +77,16 @@
     margin-top:38px;
     position: relative;
 }
-.left-box .c-title, .right-box .c-title {
+.left-box .c-title, .right-box .c-title, .bottom-box .c-title {
     position: absolute;
-    top: 19px;
+    top: 30px;
     left: 44px;
     font-size: 16px;
     color: #fff;
 }
 .right-box .c-title {
-    top: 14px;
-    left: 42px;
+    top: 10px;
+    left: 48px;
 }
 
 .bottom-box {
@@ -92,6 +96,14 @@
     background: url("../imgs/btm-bg.png") no-repeat;
     position: relative;
     clear: both;
+}
+.bottom-box .c-title {
+    top: 10px;
+    left: 42px;
+}
+#btmLine {
+    width: 1890px;
+    height: 236px;
 }
 
 .main-kss {
