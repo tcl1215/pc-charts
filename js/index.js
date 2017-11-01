@@ -1,12 +1,41 @@
 // JavaScript Document
 $(document).ready(function(){
+    //初始化页面数据
     updateData();
     setInterval(setTime, 1000);
+    
+    //////点击地图
+    //////////////////////////////////////
+    $(".MapClick").click(function(){
+        var temp;
+        var name = $(this).attr("id");
+        if(name == "baoshan2" || name == "baoshan3")  {
+            name = "baoshan";
+            temp = $("#" + name + "Map");
+        }
+        else if(name == "door1" || name == "door2" || name == "door3" || name == "door4"){
+            temp = $(this);
+        }else{
+            temp = $("#" + name + "Map");
+        }
+        temp.animate({opacity:'0.2'},100,function(){temp.animate({opacity:'1'},200);});
+    
+        //展示弹框，
+        showTip();
+        
+    });
+    
+    $(".tip-close").click(function(){
+        $(".tip").fadeOut(100);
+    });
 });
 
+//todo 页面数据渲染，填入真实数据
 function updateData() {
     initLeftBar();
     initBtmLine();
+    showRadar();
+    showRanking();
 }
 
 //左侧柱状图
@@ -247,5 +276,127 @@ function initBtmLine() {
    ],
    color: ['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3','#ffff00', '#5e53dd', '#fff', '#ff0000', '#00ffff']
 };
+    myChart.setOption(option);
+}
+
+//展示右侧排行榜
+function showRanking() {
+    //todo 静态数据，后续替换
+    var ranking = [{
+        name: '崇明区',
+        grade: 98
+    },{
+        name: '宝山区',
+        grade: 97
+    },{
+        name: '嘉定区',
+        grade: 95
+    },{
+        name: '青浦区',
+        grade: 80
+    },{
+        name: '金山区',
+        grade: 60
+    },{
+        name: '松江区',
+        grade: 58
+    },{
+        name: '奉贤区',
+        grade: 56
+    },{
+        name: '闵行区',
+        grade: 52
+    },{
+        name: '浦东新区',
+        grade: 50
+    },{
+        name: '杨浦区',
+        grade: 48
+    },{
+        name: '虹口区',
+        grade: 45
+    },{
+        name: '普陀区',
+        grade: 42
+    },{
+        name: '长宁区',
+        grade: 40
+    },{
+        name: '静安区',
+        grade: 36
+    },{
+        name: '徐汇区',
+        grade: 32
+    },{
+        name: '黄浦区',
+        grade: 28
+    }]
+    
+    var html = ''
+    ranking.forEach(function(obj, index) {
+        //根据分数占比，算出显示长度
+        html += '<li class="level'+(index + 1)+'"><div class="r-index">'+(index + 1)+'</div><div class="r-name">'+obj.name+'</div><div class="grade-box"><div class="r-progress"><i style="width: '+ obj.grade * 141/100+'px"></i></div><div class="r-grade">'+obj.grade+'</div></div></li>'
+    })
+    $('.right-box ul').html(html);
+}
+
+//todo 展示弹框内容，为其赋值
+function showTip() {
+    showRadar();
+    
+    $(".tip").fadeOut(0);
+    $(".tip").fadeIn(200);
+}
+//弹出框雷达图
+function showRadar() {
+    var myChart = echarts.init(document.getElementById('indexRadar'));
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        radar: [
+            {
+                name: {
+                    color: '#fff'
+                },
+                indicator: [
+                    {text: '在押人员', max: 100, min: 50},
+                    {text: '民警管理', max: 100, min: 50},
+                    {text: '基础设施', max: 100, min: 50},
+                    {text: '安防设施', max: 100, min: 50},
+                    {text: '客观因素', max: 100, min: 50}
+                ],
+                axisLine: {
+                    show: false
+                },
+                splitLine: {
+                    lineStyle: {color: '#fff'}
+                },
+                splitArea: {
+                    areaStyle: {color: 'rgba(0,0,0,0)'}
+                },
+                splitNumber: 6,
+            }
+        ],
+        series: [
+            {
+                type: 'radar',
+                tooltip: {
+                    trigger: 'item'
+                },
+                label: {
+                    normal : {show: true, color: '#fff', textStyle: {fontSize: 18}}
+                },
+                itemStyle: {normal: {color: '#ffff00'}},
+                lineStyle: {normal: {color: '#ffff00'}},
+                areaStyle: {normal: {color: '#ffff00', opacity: 0.2}},
+                data: [
+                    {
+                        value: [55, 65, 76, 76, 92]
+                    }
+                ]
+            }
+        ]
+    }
     myChart.setOption(option);
 }

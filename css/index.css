@@ -85,8 +85,96 @@
     color: #fff;
 }
 .right-box .c-title {
-    top: 10px;
-    left: 48px;
+    top: 14px;
+    left: 40px;
+}
+.right-box ul {
+    width: 275px;
+    height: 630px;
+    margin: 50px auto 0;
+    color: #fff;
+}
+.right-box ul li {
+    width: 100%;
+    float: left;
+    font-size: 17px;
+    margin-top: 7px;
+    height: 28px;
+    line-height: 28px;
+    padding-right: 5px;
+    background: url("../imgs/right-item.png") no-repeat right;
+    vertical-align: middle;
+}
+.right-box .level1, .right-box .level2, .right-box .level3 {
+    margin-top: 20px;
+    height: 40px;
+    background: none;
+    font-size: 38px;
+}
+.right-box .level1 {
+    color: #ffff00;
+}
+.right-box .level2 {
+    color: #00ff00;
+}
+.right-box .level3 {
+    color: #00ffff;
+}
+.right-box .level1 .r-name, .right-box .level2 .r-name, .right-box .level3 .r-name {
+    margin-left: 26px;
+    width: auto;
+    height: auto;
+    height: 40px;
+    line-height: 40px;
+}
+.right-box .level1 .r-progress, .right-box .level2 .r-progress, .right-box .level3 .r-progress {
+    display: none;
+}
+.right-box .level1 .r-grade, .right-box .level2 .r-grade, .right-box .level3 .r-grade {
+    line-height: 40px;
+}
+.right-box .r-index {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("../imgs/index-icon.png") no-repeat;
+    line-height: 23px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+}
+.right-box .r-name {
+    display: inline-block;
+    vertical-align: inherit;
+    margin-left: 12px;
+    width: 70px;
+    height: 28px;
+    line-height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.right-box .grade-box {
+    display: inline-block;
+    float: right;
+    height: 28px;
+}
+.right-box .r-progress {
+     display: inline-block;
+     width: 141px;
+     height: 100%;
+     vertical-align: middle;
+     margin-right: 5px;
+ }
+.right-box .r-progress i {
+    display: inline-block;
+    width: 141px;
+    height: 100%;
+    background: url("../imgs/progress-icon.png") no-repeat 0 4px;
+}
+.right-box .r-grade {
+    display: inline-block;
+    line-height: 28px;
 }
 
 .bottom-box {
@@ -113,17 +201,21 @@
     background: url("../imgs/main-kss.png") no-repeat center;
     left: 40px;
     bottom: 30px;
+    z-index: 20;
 }
 .door{cursor:pointer;position:absolute; width:132px; height:30px; }
 .door-title{color:#fff;font-size:16px;display: inline-block;}
-.door-img{display: inline-block;vertical-align: middle;}
+.door-img{display: inline-block;vertical-align: middle;width: 17px;height: 7px;background: #00ff00;}
+.door-img.green {background: #00ff00;}
+.door-img.red {background: #ff0000;}
+.door-img.yellow {background: #ffff00;}
 
 .big-map{
     position:absolute;
     width:910px;
     height:620px;
-    /*top:35px;*/
-    /*left:376px;*/
+    bottom:-38px;
+    right:0;
     z-index:5;;
 }
 .big-map .img-bg{width: 100%; height: 100%;}
@@ -163,10 +255,12 @@
 
 
 .tip{position:absolute;width:533px;height:432px;top:0;right:0;background:url(../imgs/tip-bg.png); z-index:999;}
-.tip-img{ position:absolute; top:12px; left:36px; width:196px; height:105px;}
+.tip-img{ position:absolute; top:12px; left:36px; width:196px; height:105px;background-color: #fff;}
 .tip-img img{ width:100%; height:100%;}
-.tip-text{position:absolute;left:246px;top:20px;width:262px;font-size:18px;color:#FFF;line-height: 30px;letter-spacing:2px;font-size: 17px}
+.tip-text{position:absolute;left:246px;top:20px;width:262px;font-size:18px;color:#FFF;line-height: 18px;padding: 0 20px; box-sizing: border-box; font-size: 17px}
+.tip-text .t-title{text-align: center;}
 .tip-close{ position:absolute; right:0px;top:102px; cursor:pointer;}
+#indexRadar {position:absolute; width: 366px; height: 229px; top: 178px; left: 80px}
 
 .loading{position:fixed; width:272px; height:83px; top:47%; left:47%; z-index:999;}
 .loading-img{ position:absolute; width:61px; height:61px; left:29px; top:12px;}

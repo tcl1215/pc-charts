@@ -11,7 +11,6 @@
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="js/SetNavigation.js"></script>
 <script type="text/javascript" src="js/SetSub_Nav.js"></script>
-<script type="text/javascript" src="js/setMap.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body onselectstart="return false;">
@@ -221,35 +220,51 @@
                 <div class="main-kss">
                     <!--小四门-->
                     <div id="door1" class="door MapClick" style="left: -15px; top: 26px;">
-                        <div class="door-img"></div>
+                        <div class="door-img red"></div>
                         <div class="door-title">第一看守所</div>
                     </div>
 
                     <div id="door2" class="door MapClick" style="left: 206px; top: 26px;">
-                        <div class="door-img"></div>
                         <div class="door-title">第二看守所</div>
+                        <div class="door-img yellow"></div>
                     </div>
                     <div id="door3" class="door MapClick" style="left: -15px; top: 124px;">
-                        <div class="door-img"></div>
+                        <div class="door-img yellow"></div>
                         <div class="door-title">第三看守所</div>
                     </div>
                     <div id="door4" class="door MapClick" style="left: 206px; top: 124px;">
+                        <div class="door-title green">第四看守所</div>
                         <div class="door-img"></div>
-                        <div class="door-title">第四看守所</div>
                     </div>
                 </div>
 
-
-
                 <!--tip-->
                 <div class="tip tip-display">
-                    <div class="tip-img"><img src="Images/old/Temp.png"></div>
-                    <div class="tip-text">这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文是文字。</div>
+                    <div class="tip-img"><img src="" alt="照片"></div>
+                    <div class="tip-text">
+                        <p class="t-title">XX区看守所</p>
+                        <ul>
+                            <li>地址：XXXX</li>
+                            <li>值班电话：88888888</li>
+                            <li>押量：500</li>
+                            <li>警力：100</li>
+                        </ul>
+                    </div>
                     <div class="tip-close"><img src="imgs/close.png"></div>
+
+                    <div id="indexRadar"></div>
                 </div>
             </div>
             <div class="right-box">
                 <span class="c-title">综合排名变化情况</span>
+                <ul>
+                    <li>
+                        <div class="r-index">1</div>
+                        <div class="r-name">崇明区</div>
+                        <div class="r-progress"></div>
+                        <div class="r-grade">98</div>
+                    </li>
+                </ul>
             </div>
 
         </div>

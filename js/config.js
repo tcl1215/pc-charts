@@ -1,9 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
-	$(".tip-close").click(function(){
-			$(".tip").fadeOut(100);
-	});
-	//
+	//重置
 	remove();
     if(screen.width >= 3840) {
         $(".whole").addClass("whole_3840");
