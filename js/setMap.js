@@ -8,6 +8,7 @@ $(document).ready(function(){
 			var name = $(this).attr("id");
             if(name == "baoshan2" || name == "baoshan3")  {
                 name = "baoshan";
+                temp = $("#" + name + "Map");
             }
 			else if(name == "door1" || name == "door2" || name == "door3" || name == "door4"){
 				temp = $(this);

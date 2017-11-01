@@ -1,6 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
     updateData();
+    setInterval(setTime, 1000);
 });
 
 function updateData() {
@@ -89,6 +90,12 @@ function initLeftBar() {
         color: ['#ffff00', '#5e53dd']
     };
    myChart.setOption(option);
+}
+
+function setTime() {
+    var date = new Date();
+    var str = date.getFullYear()+"."+(date.getMonth()+1)+"."+date.getDate()+"."+date.getHours()+":"+ (date.getMinutes().toString().length == 1 ? "0" + date.getMinutes() : date.getMinutes());
+    $(".current-time").text(str);
 }
 
 //底测折线图
@@ -237,7 +244,8 @@ function initBtmLine() {
            smooth: true,
            data:[76, 98,43, 65,5,47,76, 98,43, 65,5,47,76, 98,43, 65,5,47,76, 98,43, 65,5,47,76, 98,43, 65,5,47,]
        }
-   ]
+   ],
+   color: ['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3','#ffff00', '#5e53dd', '#fff', '#ff0000', '#00ffff']
 };
     myChart.setOption(option);
 }

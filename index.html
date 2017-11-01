@@ -135,6 +135,89 @@
                         <!--</div>-->
                     </div>
                 </div>
+
+                <div class="big-map">
+                    <div style="z-index: 10;position: absolute">
+                        <img src="imgs/maps/big-blank-bg.png" border="0" usemap="#Map" class="img-bg"/>
+                        <map name="Map" id="Map">
+                            <!--崇明区-->
+                            <area class="MapClick" id="congming" shape="poly" coords="308,22,350,10,396,14,538,58,538,68,680,104,680,114,694,110,750,118,758,138,734,158,580,118,564,112,374,56,374,48,368,54,308,22" />
+                            <!--嘉定区-->
+                            <area class="MapClick" id="jiading" shape="poly" coords="282,135,295,136,304,132,324,128,329,124,334,128,368,125,382,146,372,149,387,188,374,199,389,216,398,214,402,222,362,227,340,212,288,210,268,202,256,186,256,173,246,166,278,150,282,135"/>
+                            <!--宝山区-->
+                            <area class="MapClick" id="baoshan" shape="poly" coords="382,120,418,128,476,160,500,167,500,182,488,193,463,191,445,200,443,210,424,199,400,194,387,156,397,145,382,120"/>
+
+                            <area class="MapClick" id="baoshan2" shape="poly" coords="557,150,646,169,690,194,692,204,682,204,630,177,557,150"/>
+                            <area class="MapClick" id="baoshan3" shape="poly" coords="704,186,751,196,757,206,746,216,718,208,704,186"/>
+                            <!--上海市区-->
+                            <area id="shiqu" class="NoClick" shape="poly" coords=""/>
+                            <!--闵行区-->
+                            <area class="MapClick" id="minhang" shape="poly" coords="334,219,346,224,356,232,386,234,380,249,392,260,425,255,450,290,458,288,458,296,476,306,502,295,552,304,544,312,550,318,540,338,558,339,552,352,568,352,554,364,531,353,513,354,513,348,453,356,392,366,384,360,394,348,386,340,391,325,420,310,360,240,345,240,334,219"/>
+                            <!--青浦区-->
+                            <area class="MapClick" id="qingpu" shape="poly" coords="33,273,46,265,170,268,177,261,198,261,200,207,220,200,226,204,254,206,269,214,304,222,321,216,321,225,344,252,356,247,365,261,342,262,338,272,310,274,306,267,282,269,275,261,265,266,263,277,242,288,217,278,195,285,208,308,186,303,177,311,187,323,180,331,188,342,176,362,159,366,141,356,119,372,103,363,113,353,105,328,86,325,76,316,69,325,42,324,53,288,33,273"/>
+                            <!--松江区-->
+                            <area class="MapClick" id="songjiang"  shape="poly" coords="123,396,144,366,156,377,186,369,200,314,227,314,208,287,241,296,275,282,277,274,295,276,292,285,309,288,323,277,350,278,351,268,372,267,404,305,399,315,381,313,370,366,402,375,401,394,385,409,339,398,335,414,288,389,242,397,232,392,212,392,204,401,173,388,163,398,123,396"/>
+                            <!--浦东区-->
+                            <area class="MapClick" id="pudong"  shape="poly" coords="509,170,577,185,589,197,661,226,853,395,877,437,870,463,767,469,766,418,679,373,578,359,576,345,568,347,565,331,551,330,571,318,557,298,490,287,482,287,487,262,517,248,506,232,552,225,538,189,509,170"/>
+                            <!--奉贤区-->
+                            <area class="MapClick" id="fengxian"  shape="poly" coords="414,372,503,356,506,367,526,361,559,373,601,368,618,375,678,380,758,424,757,470,553,482,551,493,503,510,481,482,446,476,427,467,426,435,409,427,403,402,414,372"/>
+                            <!--金山区-->
+                            <area class="MapClick" id="jinshan"  shape="poly" coords="71,451,112,419,84,406,100,402,103,376,119,381,111,402,177,409,180,397,192,400,186,413,215,414,218,404,286,400,340,425,349,415,392,417,416,442,413,464,455,489,471,489,486,511,468,511,469,521,452,522,373,575,316,576,316,540,284,521,266,490,232,500, 190,493, 201,459, 184,437, 130,441, 110,461, 94,446, 71,451"/>
+                        </map>
+                    </div>
+
+                    <!--大地图-->
+                    <div id="baoshanMap" class="map-cover" style="left: 366px; top: 109px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/baoshan-green.png"></div>
+                        <div class="big-map-title" style="position:absolute; z-index:2; left: 49px; top: 56px;">宝山区</div>
+                    </div>
+
+                    <div id="songjiangMap" class="map-cover" style="left: 117px; top: 262px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/songjiang-green.png"></div>
+                        <div class="big-map-title" style="left: 140px; top: 68px;">松江区</div>
+                    </div>
+
+                    <div id="fengxianMap" class="map-cover" style="left: 393px; top: 345px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/fengxian-green.png"></div>
+                        <div class="big-map-title" style="left: 131px; top: 80px;">奉贤区</div>
+                    </div>
+
+                    <div id="jiadingMap" class="map-cover" style="left: 232px; top: 112px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/jiading-green.png"></div>
+                        <div class="big-map-title" style="left: 59px; top: 47px;">嘉定区</div>
+                    </div>
+
+                    <div id="jinshanMap" class="map-cover" style="left: 60px; top: 365px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/jinshan-green.png"></div>
+                        <div class="big-map-title" style="left: 200px; top: 84px;">金山区</div>
+                    </div>
+
+                    <div id="pudongMap" class="map-cover" style="left: 468px; top: 157px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/pudong-green.png"></div>
+                        <div class="big-map-title" style="left: 153px; top: 148px;">浦东区</div>
+                    </div>
+
+                    <div id="shiquMap" class="map-cover" style="left: 330px; top: 180px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/shiqu-green.png"></div>
+                        <div class="big-map-title" style="left: 90px; top: 42px;">上海市区</div>
+                    </div>
+
+                    <div id="minhangMap" class="map-cover" style="left: 322px; top: 210px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/minhang-green.png"></div>
+                        <div class="big-map-title" style="left: 102px; top: 104px;">闵行区</div>
+                    </div>
+
+                    <div id="qingpuMap" class="map-cover" style="left: 18px; top: 188px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/qingpu-green.png"></div>
+                        <div class="big-map-title" style="left: 80px; top: 100px;">青浦区</div>
+                    </div>
+
+
+                    <div id="congmingMap" class="map-cover" style="left: 295px; top: 0px;">
+                        <div class="big-map-img"><img src="imgs/maps/area/congming-green.png"></div>
+                        <div class="big-map-title" style="left: 175px; top: 64px;">崇明区</div>
+                    </div>
+                </div>
                 <div class="main-kss">
                     <!--小四门-->
                     <div id="door1" class="door MapClick" style="left: -15px; top: 26px;">
