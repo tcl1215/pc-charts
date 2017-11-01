@@ -1,12 +1,12 @@
 .whole {background: url("../imgs/main-bg.jpg");background-size: cover;}
-.Nav_Top{z-index:999;position:relative;width:100%;height: 60px;}
-.Nav_Top .logo {margin-left: 5px; float: left;}
-.Nav_Top ul{margin:0px;padding:0 0 0 60px;list-style:none; background: url("../imgs/nav-bg.png") no-repeat;width: 1029px;height: 52px;float: left;box-sizing: content-box;}
+.nav-top{z-index:999;position:relative;width:100%;height: 60px;}
+.nav-top .logo {margin-left: 5px; float: left;}
+.nav-top ul{margin:0px;padding:0 0 0 60px;list-style:none; background: url("../imgs/nav-bg.png") no-repeat;width: 1029px;height: 52px;float: left;box-sizing: content-box;}
 .Nav_Top_Li{float:left;width:115px;line-height: 52px;text-align:center;color:#FFF;font-size:20px;cursor:pointer; margin:0px; }
 .Nav_Top_Li div{width:100%;height:52px;position:relative;}
 .Nav_Top_Click ,.Nav_Top_Li:hover{color: #00ffff; font-weight: bold;}
 
-.Nav_Top .current-time {
+.nav-top .current-time {
     font-size: 42px;
     color: #fff;
     float: right;
