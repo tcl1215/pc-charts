@@ -34,7 +34,6 @@ $(document).ready(function(){
 function updateData() {
     initLeftBar();
     initBtmLine();
-    showRadar();
     showRanking();
 }
 

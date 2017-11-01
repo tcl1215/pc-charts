@@ -29,7 +29,7 @@ function remove() {
 
 function Loading(isShow){
     if(isShow == true)
-    $("#Loading").fadeIn(100);
+    $("#loading").fadeIn(100);
     else
-    $("#Loading").fadeOut(100);
+    $("#loading").fadeOut(100);
 }
