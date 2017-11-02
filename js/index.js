@@ -1,11 +1,10 @@
 // JavaScript Document
 $(document).ready(function(){
-    //初始化页面数据
+    //初始化页面数据, 默认查出 综合得分&考核模式
     updateData();
     setInterval(setTime, 1000);
     
-    //////点击地图
-    //////////////////////////////////////
+    //点击地图
     $(".MapClick").click(function(){
         var temp;
         var name = $(this).attr("id");
@@ -25,6 +24,80 @@ $(document).ready(function(){
         
     });
     
+    //双击地图, 跳转到对应板块的详情页面
+    $(".MapClick").dblclick(function () {
+        var name = $(this).attr("id");
+        if(name == "baoshan2" || name == "baoshan3")  {
+            name = "baoshan";
+        }
+        window.location.href = '/chart.html?name=' + name;
+    });
+    
+    $('.nav-top-ul li').click(function() {
+        if ($(this).hasClass('selected')) {
+            return;
+        }
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+    
+        var name = $(this).attr("id");
+        if (name == 'CompositeScore') {
+            //综合得分，更新页面
+            updateData();
+        }
+        else if(name == 'OnlineStaff') {
+            //在押人员，更新页面
+            updateData();
+        }
+        else if(name == 'PoliceManagement') {
+            //民警管理，更新页面
+            updateData();
+        }
+        else if(name == 'Infrastructure') {
+            //基础设施，更新页面
+            updateData();
+        }
+        else if(name == 'SecurityFacilities') {
+            //安全设施，更新页面
+            updateData();
+        }
+        else if(name == 'ObjectiveFactors') {
+            //客观因素，更新页面
+            updateData();
+        }
+        else if(name == 'ImportantTips') {
+            //重点提示，更新页面
+            //todo 切换到重点提示页面
+        }
+        else if(name == 'RankingList') {
+            //排行榜，更新页面
+            //todo 切换到排行榜页面
+        }
+    });
+    
+    // 模式切换
+    $(".filter-box li").click(function () {
+        if ($(this).hasClass('selected')) {
+            return;
+        }
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+        
+        var name = $(this).attr("id");
+        if (name == 'checkMode') {
+            //考核模式，更新页面
+            updateData();
+        }
+        else if(name == 'warningMode') {
+            //预警模式，更新页面
+            updateData();
+        }
+        else if(name == 'assessMode') {
+            //评估模式，更新页面
+            updateData();
+        }
+    });
+    
     $(".tip-close").click(function(){
         $(".tip").fadeOut(100);
     });
@@ -32,11 +105,64 @@ $(document).ready(function(){
 
 //todo 页面数据渲染，填入真实数据
 function updateData() {
+    //Loading(true);  请求数据时打开loading样式
+    //Loading(false); 请求完数据时关闭loading
     initLeftBar();
     initBtmLine();
     showRanking();
+    
+    showMap();
 }
 
+
+//todo 静态数据，需改成动态渲染
+var mapData = [
+    //name 对应中文名， alias对应拼音，grade对应分数，type用于区分区域所还是总所
+    {name: '崇明区',alias: 'congming',grade: 98, type: 'area'},
+    {name: '宝山区',alias: 'baoshan',grade: 97, type: 'area'},
+    {name: '嘉定区',alias: 'jiading',grade: 95, type: 'area'},
+    {name: '青浦区',alias: 'qingpu',grade: 80, type: 'area'},
+    {name: '金山区',alias: 'jinshan',grade: 60, type: 'area'},
+    {name: '松江区',alias: 'songjiang',grade: 58, type: 'area'},
+    {name: '奉贤区',alias: 'fengxian',grade: 56, type: 'area'},
+    {name: '闵行区',alias: 'minhang',grade: 52, type: 'area'},
+    {name: '浦东新区',alias: 'pudong',grade: 50, type: 'area'},
+    {name: '杨浦区',alias: 'yangpu',grade: 48, type: 'area'},
+    {name: '虹口区',alias: 'hongkou',grade: 45, type: 'area'},
+    {name: '普陀区',alias: 'putuo',grade: 42, type: 'area'},
+    {name: '长宁区',alias: 'changning',grade: 40, type: 'area'},
+    {name: '静安区',alias: 'jingan',grade: 36, type: 'area'},
+    {name: '徐汇区',alias: 'xuhui',grade: 32, type: 'area'},
+    {name: '黄浦区',alias: 'huangpu',grade: 28, type: 'area'},
+    {name: '上海市区',alias: 'shiqu',grade: 78, type: 'area'},
+    {name: '第一看守所',alias: 'door1',grade: 88, type: 'main'},
+    {name: '第二看守所',alias: 'door2',grade: 56, type: 'main'},
+    {name: '第三看守所',alias: 'door3',grade: 79, type: 'main'},
+    {name: '第四看守所',alias: 'door4',grade: 69, type: 'main'}]
+
+//地图色块显示
+function showMap() {
+    //mapData 为后台获取数据
+    mapData.forEach(function(data) {
+        var color = 'green';
+        if (data.grade >= 80) {
+            color = 'green';
+        }
+        else if (data.grade < 80 && data.grade > 60) {
+            color = 'yellow';
+        }
+        else if (data.grade <= 60) {
+            color = 'red';
+        }
+        if(data.type == 'area') {
+            $("#" + data.alias + "Map").find("img").attr("src","imgs/maps/area/"+data.alias+"-"+color+".png");
+        } else {
+            var temp = $("#" + data.alias).find('door-img');
+            temp.removeClass('red').removeClass('yellow').removeClass('green');
+            temp.addClass(color);
+        }
+    })
+}
 //左侧柱状图
 function initLeftBar() {
     var myChart = echarts.init(document.getElementById('leftBar'));
@@ -280,62 +406,29 @@ function initBtmLine() {
 
 //展示右侧排行榜
 function showRanking() {
-    //todo 静态数据，后续替换
-    var ranking = [{
-        name: '崇明区',
-        grade: 98
-    },{
-        name: '宝山区',
-        grade: 97
-    },{
-        name: '嘉定区',
-        grade: 95
-    },{
-        name: '青浦区',
-        grade: 80
-    },{
-        name: '金山区',
-        grade: 60
-    },{
-        name: '松江区',
-        grade: 58
-    },{
-        name: '奉贤区',
-        grade: 56
-    },{
-        name: '闵行区',
-        grade: 52
-    },{
-        name: '浦东新区',
-        grade: 50
-    },{
-        name: '杨浦区',
-        grade: 48
-    },{
-        name: '虹口区',
-        grade: 45
-    },{
-        name: '普陀区',
-        grade: 42
-    },{
-        name: '长宁区',
-        grade: 40
-    },{
-        name: '静安区',
-        grade: 36
-    },{
-        name: '徐汇区',
-        grade: 32
-    },{
-        name: '黄浦区',
-        grade: 28
-    }]
-    
+    //todo 静态测试数据，后续替换
+    var rankingData = [
+        {name: '崇明区',grade: 98},
+        {name: '宝山区',grade: 97},
+        {name: '嘉定区',grade: 95},
+        {name: '青浦区',grade: 80},
+        {name: '金山区',grade: 60},
+        {name: '松江区',grade: 58},
+        {name: '奉贤区',grade: 56},
+        {name: '闵行区',grade: 52},
+        {name: '浦东新区',grade: 50},
+        {name: '杨浦区',grade: 48},
+        {name: '虹口区',grade: 45},
+        {name: '普陀区',grade: 42},
+        {name: '长宁区',grade: 40},
+        {name: '静安区',grade: 36},
+        {name: '徐汇区',grade: 32},
+        {name: '黄浦区',grade: 28}]
     var html = ''
-    ranking.forEach(function(obj, index) {
+    rankingData.forEach(function(obj, index) {
         //根据分数占比，算出显示长度
         html += '<li class="level'+(index + 1)+'"><div class="r-index">'+(index + 1)+'</div><div class="r-name">'+obj.name+'</div><div class="grade-box"><div class="r-progress"><i style="width: '+ obj.grade * 141/100+'px"></i></div><div class="r-grade">'+obj.grade+'</div></div></li>'
-    })
+    });
     $('.right-box ul').html(html);
 }
 
