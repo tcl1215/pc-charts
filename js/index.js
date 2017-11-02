@@ -118,27 +118,27 @@ function updateData() {
 //todo 静态数据，需改成动态渲染
 var mapData = [
     //name 对应中文名， alias对应拼音，grade对应分数，type用于区分区域所还是总所
-    {name: '崇明区',alias: 'congming',grade: 98, type: 'area'},
-    {name: '宝山区',alias: 'baoshan',grade: 97, type: 'area'},
-    {name: '嘉定区',alias: 'jiading',grade: 95, type: 'area'},
-    {name: '青浦区',alias: 'qingpu',grade: 80, type: 'area'},
-    {name: '金山区',alias: 'jinshan',grade: 60, type: 'area'},
-    {name: '松江区',alias: 'songjiang',grade: 58, type: 'area'},
-    {name: '奉贤区',alias: 'fengxian',grade: 56, type: 'area'},
-    {name: '闵行区',alias: 'minhang',grade: 52, type: 'area'},
-    {name: '浦东新区',alias: 'pudong',grade: 50, type: 'area'},
-    {name: '杨浦区',alias: 'yangpu',grade: 48, type: 'area'},
-    {name: '虹口区',alias: 'hongkou',grade: 45, type: 'area'},
-    {name: '普陀区',alias: 'putuo',grade: 42, type: 'area'},
-    {name: '长宁区',alias: 'changning',grade: 40, type: 'area'},
-    {name: '静安区',alias: 'jingan',grade: 36, type: 'area'},
-    {name: '徐汇区',alias: 'xuhui',grade: 32, type: 'area'},
-    {name: '黄浦区',alias: 'huangpu',grade: 28, type: 'area'},
-    {name: '上海市区',alias: 'shiqu',grade: 78, type: 'area'},
-    {name: '第一看守所',alias: 'door1',grade: 88, type: 'main'},
-    {name: '第二看守所',alias: 'door2',grade: 56, type: 'main'},
-    {name: '第三看守所',alias: 'door3',grade: 79, type: 'main'},
-    {name: '第四看守所',alias: 'door4',grade: 69, type: 'main'}]
+    {name: '崇明区',alias: 'congming',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '宝山区',alias: 'baoshan',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '嘉定区',alias: 'jiading',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '青浦区',alias: 'qingpu',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '金山区',alias: 'jinshan',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '松江区',alias: 'songjiang',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '奉贤区',alias: 'fengxian',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '闵行区',alias: 'minhang',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '浦东新区',alias: 'pudong',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '杨浦区',alias: 'yangpu',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '虹口区',alias: 'hongkou',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '普陀区',alias: 'putuo',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '长宁区',alias: 'changning',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '静安区',alias: 'jingan',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '徐汇区',alias: 'xuhui',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '黄浦区',alias: 'huangpu',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '上海市区',alias: 'shiqu',grade: parseInt(Math.random()*100), type: 'area'},
+    {name: '第一看守所',alias: 'door1',grade: parseInt(Math.random()*100), type: 'main'},
+    {name: '第二看守所',alias: 'door2',grade: parseInt(Math.random()*100), type: 'main'},
+    {name: '第三看守所',alias: 'door3',grade: parseInt(Math.random()*100), type: 'main'},
+    {name: '第四看守所',alias: 'door4',grade: parseInt(Math.random()*100), type: 'main'}]
 
 //地图色块显示
 function showMap() {
@@ -434,10 +434,9 @@ function showRanking() {
 
 //todo 展示弹框内容，为其赋值
 function showTip() {
-    showRadar();
-    
     $(".tip").fadeOut(0);
     $(".tip").fadeIn(200);
+    showRadar();
 }
 //弹出框雷达图
 function showRadar() {
