@@ -1,4 +1,6 @@
-// JavaScript Document
+// 当前区
+var name = getQueryString('name');
+
 $(document).ready(function(){
     //初始化右上角时间
     setInterval(setDetailTime, 1000);

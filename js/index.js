@@ -1,11 +1,35 @@
-// JavaScript Document
+//记录当前选中菜单，先获取参数中的选中index,如没有默认第0个
+var tabIndex = getQueryString('tabIndex') || 0;
+
+var tabName = '';
+
+var modeIndex = 0; //默认选中考核模式
+var modeName = '';
+
+//定义setTimeout执行方法
+var time = null;
+
 $(document).ready(function(){
-    //初始化页面数据, 默认查出 综合得分&考核模式
-    updateData();
+    
     setInterval(setTime, 1000);
+    
+    //双击地图, 跳转到对应板块的详情页面
+    $(".MapClick").dblclick(function () {
+        // 取消上次延时未执行的方法
+        clearTimeout(time);
+        
+        var name = $(this).attr("id");
+        if(name == "baoshan2" || name == "baoshan3")  {
+            name = "baoshan";
+        }
+        window.location.href = 'chart.html?name=' + name;
+    });
     
     //点击地图
     $(".MapClick").click(function(){
+        var that = this;
+        // 取消上次延时未执行的方法
+        clearTimeout(time);
         var temp;
         var name = $(this).attr("id");
         if(name == "baoshan2" || name == "baoshan3")  {
@@ -19,18 +43,13 @@ $(document).ready(function(){
         }
         temp.animate({opacity:'0.2'},100,function(){temp.animate({opacity:'1'},200);});
     
-        //展示弹框，
-        showTip();
+        //执行延时，防止双击时触发单击事件
+        time = setTimeout(function(){
+            //展示弹框，
+            showTip();
+        }, 200);
         
-    });
-    
-    //双击地图, 跳转到对应板块的详情页面
-    $(".MapClick").dblclick(function () {
-        var name = $(this).attr("id");
-        if(name == "baoshan2" || name == "baoshan3")  {
-            name = "baoshan";
-        }
-        window.location.href = '/chart.html?name=' + name;
+        
     });
     
     $('.nav-top-ul li').click(function() {
@@ -40,38 +59,19 @@ $(document).ready(function(){
         $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
     
-        var name = $(this).attr("id");
-        if (name == 'CompositeScore') {
-            //综合得分，更新页面
-            updateData();
+        tabName = $(this).attr("id");
+        tabIndex = $(this).index();
+        
+        if(tabName == 'ImportantTips') {
+            window.location.href = 'important-tips.html'
         }
-        else if(name == 'OnlineStaff') {
-            //在押人员，更新页面
-            updateData();
-        }
-        else if(name == 'PoliceManagement') {
-            //民警管理，更新页面
-            updateData();
-        }
-        else if(name == 'Infrastructure') {
-            //基础设施，更新页面
-            updateData();
-        }
-        else if(name == 'SecurityFacilities') {
-            //安全设施，更新页面
-            updateData();
-        }
-        else if(name == 'ObjectiveFactors') {
-            //客观因素，更新页面
-            updateData();
-        }
-        else if(name == 'ImportantTips') {
-            //重点提示，更新页面
-            //todo 切换到重点提示页面
-        }
-        else if(name == 'RankingList') {
+        else if(tabName == 'RankingList') {
             //排行榜，更新页面
-            //todo 切换到排行榜页面
+            alert('排行榜页面')
+        }
+        else {
+            //当前页面的tab，点击完，模拟点击模式
+            $('.filter-box').find('li')[modeIndex].click();
         }
     });
     
@@ -83,20 +83,14 @@ $(document).ready(function(){
         $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
         
-        var name = $(this).attr("id");
-        if (name == 'checkMode') {
-            //考核模式，更新页面
-            updateData();
-        }
-        else if(name == 'warningMode') {
-            //预警模式，更新页面
-            updateData();
-        }
-        else if(name == 'assessMode') {
-            //评估模式，更新页面
-            updateData();
-        }
+        modeName = $(this).attr("id");
+        modeIndex = $(this).index();
+        
+        updateData();
     });
+    
+    //初始化页面数据
+    $('.nav-top-ul').find('li')[tabIndex].click();
     
     $(".tip-close").click(function(){
         $(".tip").fadeOut(100);
@@ -105,6 +99,8 @@ $(document).ready(function(){
 
 //todo 页面数据渲染，填入真实数据
 function updateData() {
+    //tabIndex菜单索引 & modeIndex 模式索引   tabName 菜单名字 & modeName 模式名字 可通过全局的以上变量判断当前选择的tab
+    
     //Loading(true);  请求数据时打开loading样式
     //Loading(false); 请求完数据时关闭loading
     initLeftBar();

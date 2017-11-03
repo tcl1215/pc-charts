@@ -1,4 +1,6 @@
-// JavaScript Document
+// 当前区
+var name = getQueryString('name');
+
 $(document).ready(function(){
     initBox2();
 })

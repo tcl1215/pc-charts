@@ -1,34 +1,25 @@
-// JavaScript Document
+// 记录模式索引
+var modeIndex = 0;
+
+//记录左侧选中类型以及索引
 var type = 'average';
 var index = 0;
 $(document).ready(function(){
-    showAverageLine();
     
     $('.menu-box li').click(function() {
         var name = $(this).attr("id");
-        if (name == 'CompositeScore') {
-            //综合得分，更新页面
-            //todo 切换到综合得分页面
-        }
-        else if(name == 'OnlineStaff') {
-            //todo 切换到在押人员页面
-        }
-        else if(name == 'PoliceManagement') {
-            //民警管理，更新页面
-            //todo 切换到民警管理页面
-        }
-        else if(name == 'Infrastructure') {
-            //todo 切换到基础设施页面
-        }
-        else if(name == 'SecurityFacilities') {
-            //todo 切换到安全设施页面
-        }
-        else if(name == 'ObjectiveFactors') {
-            //todo 切换到客观因素页面
+        var tabIndex = $(this).index();
+        
+        if(name == 'ImportantTips') {
+            //重点因素 不做任何
+            return;
         }
         else if(name == 'RankingList') {
             //排行榜，更新页面
-            //todo 切换到排行榜页面
+            alert('排行榜页面')
+        }
+        else {
+            window.location.href = 'index.html?tabIndex=' + tabIndex;
         }
     });
     
@@ -42,39 +33,48 @@ $(document).ready(function(){
         
         var name = $(this).attr("id");
         if (name == 'checkMode') {
-            //考核模式，更新页面
-            updateAverageChart();
+            //切换到考核模式，todo 将左侧数据更新，模拟选中平均框中的第一条数据
+            $('#average').find('li')[0].click();
         }
         else if(name == 'warningMode') {
-            //预警模式，更新页面
-            updateAverageChart();
+            //切换到预警模式，todo 将左侧数据更新，模拟选中平均框中的第一条数据
+            $('#average').find('li')[0].click();
         }
     });
     
-    $('.item-box .list-item').click(function() {
+    $('.item-box li').click(function() {
         $('.list-item').removeClass('selected');
         $(this).addClass('selected');
-        var type = $(this).parents('ul').attr('id');
+        type = $(this).parents('ul').attr('id');
+        index = $(this).index();
+        
         if(type == 'average') {
-            
+            updateAverageChart();
         }
         else if(type == 'important') {
-            
+            updataImportantChart();
         }
     });
+    
+    $('#' + type).find('li')[index].click();
 });
 
 //展示平均指数对应的表
 function updateAverageChart() {
+    $('.average-box').fadeIn();
+    $('.important-box').fadeOut();
     showAverageLine();
     showAverageBar()
 }
 
 //展示重点工作对应的表
 function updataImportantChart() {
+    $('.average-box').fadeOut();
+    $('.important-box').fadeIn();
     showImportantBar();
 }
 
+//全市指数变化折线图
 function showAverageLine() {
     var myChart = echarts.init(document.getElementById('lineChart'));
     var option = {
@@ -139,7 +139,7 @@ function showAverageLine() {
     myChart.setOption(option);
     
 }
-
+//各所指数变化柱状图
 function showAverageBar() {
     var myChart = echarts.init(document.getElementById('barChart'));
     var option = {
@@ -221,6 +221,7 @@ function showAverageBar() {
     myChart.setOption(option);
 }
 
+//重要工作柱状图
 function showImportantBar() {
     var myChart = echarts.init(document.getElementById('importantBarChart'));
     var option = {
@@ -244,9 +245,6 @@ function showImportantBar() {
                 type: 'category',
                 data: ['未开展','招投标','试运行','已完成'],
                 axisTick: {show: false},
-                axisLabel: {
-                    show: false
-                }
             }
         ],
         yAxis: [
