@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc40e6e8-d0e0-4f0d-b473-45e0e7cfa9e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/radio-item.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chart1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chart2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chart3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chart4.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/single-radio.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/important-tips.css" afterPath="$PROJECT_DIR$/css/important-tips.css" />
     </list>
     <ignored path="Web_New.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,31 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chart2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/chart2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/chart3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chart4.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/chart4.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="important-tips.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/important-tips.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -148,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
@@ -194,7 +180,6 @@
         <option value="$PROJECT_DIR$/importantTips.html" />
         <option value="$PROJECT_DIR$/css/single.css" />
         <option value="$PROJECT_DIR$/important-tips.html" />
-        <option value="$PROJECT_DIR$/css/important-tips.css" />
         <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/chart1.js" />
@@ -210,6 +195,7 @@
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/global.css" />
         <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/css/important-tips.css" />
       </list>
     </option>
   </component>
@@ -220,7 +206,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="304" />
+    <option name="y" value="65" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
@@ -279,6 +266,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc-charts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc-charts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,12 +411,12 @@
       <workItem from="1509433793591" duration="20387000" />
       <workItem from="1509524072824" duration="22325000" />
       <workItem from="1509627736784" duration="9102000" />
-      <workItem from="1509717073132" duration="6335000" />
+      <workItem from="1509717073132" duration="6868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163980000" />
+    <option name="totallyTimeSpent" value="164513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,7 +428,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="1" />
+    <frame x="304" y="65" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24594785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -465,7 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/chart-old.js" />
     <entry file="file://$PROJECT_DIR$/chart-old.html" />
     <entry file="file://$PROJECT_DIR$/css/chart-old.css" />
     <entry file="file://$PROJECT_DIR$/imgs/maps/small-test-bg.png">
@@ -601,14 +601,6 @@
     <entry file="file://$PROJECT_DIR$/imgs/item-bg.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/important-tips.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="135" column="18" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
@@ -780,6 +772,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="57" column="61" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgs/single-radio.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/important-tips.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>

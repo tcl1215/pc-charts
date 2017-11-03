@@ -13,25 +13,19 @@ body {
     padding: 0 5px;
     position: relative;
     margin-top: 10px;
+    cursor: pointer;
 }
-.filter-box .selected::before {
-    width: 8px;
-    height: 8px;
-    background: #000;
-    border-radius: 100%;
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 12px;
-}
+
 .filter-box li i {
     width: 26px;
     height: 26px;
     display: inline-block;
-    border-radius: 100%;
-    border: 1px solid #000;
-    margin: 0 5px;
-    vertical-align: bottom;
+    background: url("../imgs/single-radio.png") no-repeat 0 -2px;
+    margin: 0 10px 0 5px;
+    vertical-align: text-bottom;
+}
+.filter-box .selected i {
+    background: url("../imgs/single-radio.png") no-repeat 0 -45px ;
 }
 
 .menu-box {
