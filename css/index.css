@@ -194,6 +194,7 @@
 #btmLine {
     width: 1890px;
     height: 236px;
+    z-index: 10;
 }
 
 .main-kss {
@@ -215,8 +216,8 @@
 .big-map{
     position:absolute;
     width:910px;
-    height:620px;
-    bottom:-38px;
+    height:588px;
+    bottom:0;
     right:0;
     z-index:5;;
 }
@@ -244,7 +245,6 @@
 .big-map .map-cover {
     position: absolute;
     width:500px;
-    height:500px;
 }
 
 .small-map {
