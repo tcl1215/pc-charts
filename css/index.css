@@ -48,27 +48,19 @@
     padding: 0 5px;
     position: relative;
 }
-.main-box .filter-box .selected::before {
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    border-radius: 100%;
-    content: '';
-    position: absolute;
-    left: 14px;
-    top: 4px;
-}
 .main-box .filter-box li + li{
     border-left: 2px solid #0086ff;
 }
 .filter-box li i {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
-    border-radius: 100%;
-    border: 1px solid #0086ff;
+    background: url("../imgs/radio-item.png") no-repeat right;
     margin: 0 5px;
-    vertical-align: bottom;
+    vertical-align: text-bottom;
+}
+.filter-box .selected i {
+    background: url("../imgs/radio-item.png") no-repeat 0 0;
 }
 .middle .right-box {
     width: 341px;
