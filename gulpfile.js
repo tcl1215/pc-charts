@@ -7,7 +7,7 @@ var gulp=require('gulp'),  //gulp基础库
     notify=require('gulp-notify');   //提示
 
 gulp.task('default',function(){
-    gulp.start(minifyjs');
+    gulp.start('minifyjs');
 });
 
 //JS处理

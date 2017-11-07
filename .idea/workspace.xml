@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66196726-dba9-4172-941e-4c7aafaa5a5e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/common.min.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="pc-charts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -236,12 +232,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510035601167</updated>
       <workItem from="1510035602391" duration="1518000" />
-      <workItem from="1510044876671" duration="50000" />
+      <workItem from="1510044876671" duration="105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1568000" />
+    <option name="totallyTimeSpent" value="1623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
