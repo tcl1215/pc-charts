@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>重要提示</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/important-tips.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/important-tips.js"></script>
+</head>
+<body onselectstart="return false;">
+<div class="whole">
+    <!--Nav-->
+    <div class="single-nav-top">
+        <ul class="filter-box">
+            <li class="selected" id="checkMode"><i></i>考核模式</li>
+            <li id="warningMode"><i></i>预警模式</li>
+        </ul>
+        <ul class="menu-box">
+            <li class="single-menu" id = "CompositeScore"><div>综合得分</div></li>
+            <li class="single-menu" id = "OnlineStaff"><div>在押人员</div></li>
+            <li class="single-menu" id = "PoliceManagement"><div>民警管理</div></li>
+            <li class="single-menu" id = "Infrastructure"><div>基础设施</div></li>
+            <li class="single-menu" id = "SecurityFacilities"><div>安全设施</div></li>
+            <li class="single-menu" id = "ObjectiveFactors"><div>客观因素</div></li>
+            <li class="single-menu selected" id = "ImportantTips"><div>重点提示</div></li>
+            <li class="single-menu" id = "RankingList"><div>排行榜</div></li>
+        </ul>
+    </div>
+
+    <div class="main-box">
+        <div class="left-box">
+            <div class="item-box">
+                <p class="i-title">平均指数</p>
+                <ul id="average">
+                    <li class="list-item selected">
+                        <p class="title">在押人员生活保障指数</p>
+                        <p class="num">95</p>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">XXX障指数</p>
+                        <p class="num">95</p>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">XXX指数</p>
+                        <p class="num">95</p>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">XXX指数</p>
+                        <p class="num">95</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item-box">
+                <p class="i-title">重点工作</p>
+                <ul id="important">
+                    <li class="list-item">
+                        <p class="title">看守所执法规范化</p>
+                        <p class="num">90</p>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">看守所医疗专业化</p>
+                        <p class="num">90</p>
+                    </li>
+                    <li class="list-item">
+                        <p class="title">在押人员帮厨整顿</p>
+                        <p class="num">90</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-box">
+            <div class="average-box">
+                <div id="lineChart"></div>
+                <div id="barChart"></div>
+            </div>
+            <div class="important-box">
+                <div id="importantBarChart"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--Loading-->
+    <div class="loading loading-display" id="loading">
+        <div class="loading-img"><img src="imgs/loading.gif"></div>
+        <div class="loading-title">加载中...</div>
+    </div>
+</div>
+</body>
+</html>
