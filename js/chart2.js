@@ -105,11 +105,19 @@ function showPage2Bar() {
 function showPage2Bar2() {
     var myChart = echarts.init(document.getElementById('barChart3'));
     var option = {
+        title: {
+            text: '今日诉讼环节变动',
+            textStyle: {
+                color: '#fff',
+                fontSize: 30
+            },
+            left: 'center'
+        },
         tooltip : {
             trigger: 'axis',
         },
         grid: {
-            top: '10%',
+            top: '15%',
             left: '0',
             right: '0',
             bottom: '2%',

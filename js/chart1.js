@@ -84,6 +84,14 @@ function showRadar() {
 function showPie() {
     var myChart = echarts.init(document.getElementById('pieChart'));
     var option = {
+        title: {
+            text: '被监控人员诉讼环节分布',
+            textStyle: {
+                color: '#fff',
+                fontSize: 30
+            },
+            left: 'center'
+        },
         tooltip : {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -102,8 +110,8 @@ function showPie() {
         series : [
             {
                 type: 'pie',
-                radius : '70%',
-                center: ['50%', '50%'],
+                radius : '80%',
+                center: ['40%', '54%'],
                 selectedMode: 'single',
                 label: { normal: {show: false}},
                 data:[
@@ -129,11 +137,19 @@ function showPie() {
 function showBar() {
     var myChart = echarts.init(document.getElementById('barChart'));
     var option = {
+        title: {
+            text: '被监控人员案由分布',
+            textStyle: {
+                color: '#fff',
+                fontSize: 30
+            },
+            left: 'center'
+        },
         tooltip : {
             trigger: 'axis',
         },
         grid: {
-            top: '2%',
+            top: '10%',
             left: '4%',
             right: '8%',
             bottom: '2%',

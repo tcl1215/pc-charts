@@ -103,6 +103,7 @@ body {
     border-right: 1px solid #c87e00;
     border-bottom: 1px solid #c87e00;
     text-align: center;
+    width: 100px;
 }
 .table-box .biaoTou {
     position: relative;
@@ -170,18 +171,18 @@ body {
 }
 
 .chart-box {
-    margin-top: 120px;
+    margin-top: 40px;
 
     overflow: hidden;
 }
 #pieChart {
     width: 680px;
-    height: 430px;
+    height: 510px;
     float: left;
 }
 #barChart {
     width: 580px;
-    height: 475px;
+    height: 555px;
     float: left;
     margin-left: 120px;
 }
@@ -228,7 +229,7 @@ body {
     margin-bottom: 10px;
 }
 .left-count .pic-box li + li {
-    margin-left: 40px;
+    margin-left: 10px;
 }
 .pic-box .img-box{
     width: 100%;
@@ -269,10 +270,10 @@ body {
 }
 
 .pic-box .level-c1 .img-box {
-    border: 1px solid #ff0000;
+    border: 2px solid #ff0000;
 }
 .pic-box .level-c1 .detail-box {
-    border: 1px solid #ff0000;
+    border: 2px solid #ff0000;
 }
 .pic-box .level-c2 .img-box {
     border: 1px solid #ffff00;
