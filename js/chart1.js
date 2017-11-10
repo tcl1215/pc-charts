@@ -99,7 +99,7 @@ function showPie() {
         legend: {
             orient: 'vertical',
             left: 'right',
-            top:'middle',
+            top:100,
             align: 'left',
             textStyle: {
                 color: '#fff',
