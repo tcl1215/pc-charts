@@ -177,7 +177,7 @@ function showPage3Bar() {
         grid: {
             top: 100,
             left: '4%',
-            right: '6%',
+            right: '10%',
             bottom: '0',
             containLabel: true
         },

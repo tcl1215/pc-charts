@@ -103,7 +103,7 @@ function showPie() {
             align: 'left',
             textStyle: {
                 color: '#fff',
-                fontSize: 21
+                fontSize: 24
             },
             data: ['刑事拘留', '逮捕','公安补充侦查','审查起诉','检查补充侦查','一审','二审','发回重审理','死刑复核','待执行','已决']
         },
@@ -158,7 +158,7 @@ function showBar() {
         xAxis: {
             type: 'value',
             axisLabel: {
-                fontSize: 33,
+                fontSize: 24,
                 color: '#fff'
             },
             axisTick: {

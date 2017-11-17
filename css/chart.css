@@ -8,6 +8,9 @@ body {
     background: url("../images/chart-bg.png") no-repeat;
     background-size: cover;
 }
+.f-red {
+    color: #ff0000;
+}
 .page {
     background: url("../images/chart-bg.png") no-repeat;
     background-size: cover;
@@ -176,7 +179,7 @@ body {
     overflow: hidden;
 }
 #pieChart {
-    width: 680px;
+    width: 760px;
     height: 510px;
     float: left;
 }
@@ -184,7 +187,7 @@ body {
     width: 580px;
     height: 555px;
     float: left;
-    margin-left: 120px;
+    margin-left: 80px;
 }
 /*page 1 end*/
 
@@ -363,15 +366,15 @@ body {
 }
 .info-box .ul-wrap {
     width: 560px;
-    border: 1px solid #c87e00;
+    /*border: 1px solid #c87e00;*/
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 18px 20px 8px;
+    padding: 10px 20px 5px;
     font-size: 25px;
     background-color: #3a4a66;
 }
 .info-box .item-data {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .m3-box {
     margin-left: 50px;
@@ -413,10 +416,18 @@ body {
 }
 .page3 .pie-item-box .score-num {
     position: absolute;
-    font-size: 93px;
+    font-size: 94px;
     width: 284px;
+    height: 110px;
+    line-height: 110px;
     text-align: center;
     top: 84px;
+}
+.page3 .pie-item-box .score-num.wd3 {
+    font-size: 64px;
+}
+.page3 .pie-item-box .score-num.wd4 {
+    font-size: 50px;
 }
 .page3 .pie-item-box + .pie-item-box {
     margin-left: 85px;
