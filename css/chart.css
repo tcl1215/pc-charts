@@ -369,12 +369,12 @@ body {
     /*border: 1px solid #c87e00;*/
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 10px 20px 5px;
+    padding: 18px 20px 8px;
     font-size: 25px;
     background-color: #3a4a66;
 }
 .info-box .item-data {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .m3-box {
     margin-left: 50px;
