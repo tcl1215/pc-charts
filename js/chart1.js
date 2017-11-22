@@ -85,7 +85,7 @@ function showPie() {
     var myChart = echarts.init(document.getElementById('pieChart'));
     var option = {
         title: {
-            text: '被监控人员诉讼环节分布',
+            text: '被监管人员诉讼环节分布',
             textStyle: {
                 color: '#fff',
                 fontSize: 30
@@ -99,7 +99,7 @@ function showPie() {
         legend: {
             orient: 'vertical',
             left: 'right',
-            top:100,
+            top:110,
             align: 'left',
             textStyle: {
                 color: '#fff',
@@ -111,7 +111,7 @@ function showPie() {
             {
                 type: 'pie',
                 radius : '80%',
-                center: ['40%', '54%'],
+                center: ['38%', '58%'],
                 selectedMode: 'single',
                 label: { normal: {show: false}},
                 data:[

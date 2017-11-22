@@ -13,40 +13,40 @@ function initBox3() {
         index: 1,
         name: '一监区',
         data: [
-            {value:335, name:'打架斗殴'},
-            {value:310, name:'擅自娱乐'},
-            {value:234, name:'值班不规范'},
-            {value:135, name:'私藏物品'}
+            {value:335, name:'轻微违规'},
+            {value:310, name:'严重违规'},
+            {value:234, name:'一般违规'},
+            {value:135, name:'特别严重违规'}
         ]
     }
     var pieData2 = {
         index: 2,
         name: '二监区',
         data: [
-            {value:335, name:'打架斗殴'},
-            {value:310, name:'擅自娱乐'},
-            {value:234, name:'值班不规范'},
-            {value:135, name:'私藏物品'}
+            {value:335, name:'轻微违规'},
+            {value:310, name:'严重违规'},
+            {value:234, name:'一般违规'},
+            {value:135, name:'特别严重违规'}
         ]
     }
     var pieData3 = {
         index: 3,
         name: '三监区',
         data: [
-            {value:335, name:'打架斗殴'},
-            {value:310, name:'擅自娱乐'},
-            {value:234, name:'值班不规范'},
-            {value:135, name:'私藏物品'}
+            {value:335, name:'轻微违规'},
+            {value:310, name:'严重违规'},
+            {value:234, name:'一般违规'},
+            {value:135, name:'特别严重违规'}
         ]
     }
     var pieData4 = {
         index: 4,
         name: '四监区',
         data: [
-            {value:335, name:'打架斗殴'},
-            {value:310, name:'擅自娱乐'},
-            {value:234, name:'值班不规范'},
-            {value:135, name:'私藏物品'}
+            {value:335, name:'轻微违规'},
+            {value:310, name:'严重违规'},
+            {value:234, name:'一般违规'},
+            {value:135, name:'特别严重违规'}
         ]
     }
     //显示四个饼状图
@@ -88,9 +88,15 @@ function showPage3Line() {
         },
         yAxis: {
             type: 'value',
+            // axisLabel: {
+            //     show: true,
+            //     textStyle: {fontSize: 21, color: '#fff'}
+            // },
             axisLabel: {
-                show: true,
-                textStyle: {fontSize: 21, color: '#fff'}
+                show: false,
+            },
+            axisTick: {
+                show: false,
             },
             axisLine: {
                 show: false,
@@ -98,7 +104,7 @@ function showPage3Line() {
             splitNumber: 6,
             splitLine: {
                 lineStyle: {type: 'dashed'}
-            }
+            },
         },
         series : [
             {
@@ -136,22 +142,31 @@ function showPage3Pie(params) {
             trigger: 'item',
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
+        legend: {
+            align: 'left',
+            textStyle: {
+                color: '#fff',
+                fontSize: 16
+            },
+            data: ['轻微违规', '严重违规','一般违规','特别严重违规']
+        },
         series: [
             {
                 name: params.name,
                 type:'pie',
-                center: ['50%', '40%'],
-                radius: ['40%', '80%'],
-                label: {
-                    normal: {
-                        show: true,
-                        formatter: '{b}',
-                        position: 'inside',
-                        textStyle: {
-                            fontSize: '22'
-                        }
-                    }
-                },
+                center: ['50%', '48%'],
+                radius: ['40%', '75%'],
+                // label: {
+                //     normal: {
+                //         show: true,
+                //         formatter: '{b}',
+                //         position: 'inside',
+                //         textStyle: {
+                //             fontSize: '22'
+                //         }
+                //     }
+                // },
+                label: { normal: {show: false}},
                 data:params.data
             }
         ],
@@ -199,8 +214,12 @@ function showPage3Bar() {
                 lineStyle: {color: '#fff'}
             },
             axisLabel: {
-                textStyle: {fontSize: 21}
-            }
+                show: false,
+                // textStyle: {fontSize: 21}
+            },
+            axisTick: {
+                show: false,
+            },
         },
         series : [
             {

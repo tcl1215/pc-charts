@@ -34,6 +34,7 @@ function showPage4Bar() {
             data:['高血压','糖尿病','心脏病','皮肤病', '高龄', '体内异物', '脑梗']
         },
         grid: {
+            top: 20,
             left: '3%',
             right: '180',
             bottom: '3%',
@@ -61,18 +62,24 @@ function showPage4Bar() {
             {
                 type : 'value',
                 splitNumber: 10,
-                axisLabel: {
-                    fontSize: 20,
-                    color: '#fff'
-                },
-                axisTick: {
-                    show: true,
-                },
+                // axisLabel: {
+                //     fontSize: 20,
+                //     color: '#fff'
+                // },
+                // axisTick: {
+                //     show: true,
+                // },
                 axisLine: {
                     lineStyle: {
                         color: '#fff'
                     }
-                }
+                },
+                axisLabel: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
             }
         ],
         series : [
@@ -147,17 +154,23 @@ function showPage4Line1() {
         },
         yAxis: {
             type: 'value',
-            axisLabel: {
-                show: true,
-                textStyle: {fontSize: 21, color: '#fff'}
-            },
+            // axisLabel: {
+            //     show: true,
+            //     textStyle: {fontSize: 21, color: '#fff'}
+            // },
             axisLine: {
                 show: false,
             },
             splitNumber: 6,
             splitLine: {
                 lineStyle: {type: 'dashed'}
-            }
+            },
+            axisLabel: {
+                show: false,
+            },
+            axisTick: {
+                show: false,
+            },
         },
         series : [
             {
@@ -189,6 +202,7 @@ function showPage4Line2() {
                 color: '#fff',
                 fontSize: 30
             },
+            left:'center'
         },
         tooltip: {
             trigger: 'axis'
@@ -196,7 +210,7 @@ function showPage4Line2() {
         legend: {
             data:['一监区','二监区','三监区','四监区'],
             right: 10,
-            top: 10,
+            top: 40,
             textStyle: {
                 fontSize: 20,
                 color: '#fff'
@@ -205,7 +219,7 @@ function showPage4Line2() {
         grid: {
             top: 84,
             left: '3%',
-            right: '2%',
+            right: '3%',
             bottom: '3%',
             containLabel: true
         },
@@ -234,18 +248,24 @@ function showPage4Line2() {
             axisLine: {
                 lineStyle: {color: '#fff'}
             },
-            axisLabel: {
-                textStyle: {fontSize: 21}
-            },
-            axisTick: {
-                show: true,
-                lineStyle: {color: '#465570'}
-            },
+            // axisLabel: {
+            //     textStyle: {fontSize: 21}
+            // },
+            // axisTick: {
+            //     show: true,
+            //     lineStyle: {color: '#465570'}
+            // },
             splitLine: {
                 lineStyle: {
                     color: '#465570'
                 }
-            }
+            },
+            axisLabel: {
+                show: false,
+            },
+            axisTick: {
+                show: false,
+            },
         },
         series: [
             {
