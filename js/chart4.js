@@ -272,8 +272,14 @@ function showPage4Line2() {
                 name:'一监区',
                 type:'line',
                 data:[89, 67, 98, 76, 87, 98, 84, 90],
+                
                 symbol: 'rect',
                 symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        width: 4
+                    }
+                },
             },
             {
                 name:'二监区',
@@ -281,6 +287,11 @@ function showPage4Line2() {
                 data:[76, 87, 65, 85, 65, 76, 65, 87],
                 symbol: 'triangle',
                 symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        width: 4
+                    }
+                },
             },
             {
                 name:'三监区',
@@ -288,6 +299,11 @@ function showPage4Line2() {
                 data:[98, 76, 87, 76, 87, 56, 54, 98],
                 symbol: 'circle',
                 symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        width: 4
+                    }
+                },
             },
             {
                 name:'四监区',
@@ -295,9 +311,14 @@ function showPage4Line2() {
                 data:[65, 76, 65, 54, 65, 87, 65, 90],
                 symbol: 'diamond',
                 symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        width: 4
+                    }
+                },
             }
         ],
-        color: ['#cb0505', '#3aa710', '#dd8d10', '#e3e5e7']
+        color: ['#ff0506', '#5aff11', '#ffff0f', '#ffffff']
     };
     myChart.setOption(option);
 }
