@@ -110,9 +110,9 @@ body {
 }
 .table-box .biaoTou {
     position: relative;
-    width: 170px;
+    width: 166px;
     background: url("../imgs/biaotou.png") no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 .footer {

@@ -172,7 +172,8 @@ function initLeftBar() {
             top: 70,
             textStyle: {
                 color: '#fff',
-                fontSize: 16
+                fontSize: 16,
+                fontFamily: 'sszh'
             }
         },
         grid: {

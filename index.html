@@ -17,7 +17,7 @@
     <!--Nav-->
     <div class="nav-top">
         <div class="logo">
-            <img src="./imgs/logo.png"/>
+            上海市公安监管预警平台
         </div>
         <ul class="nav-top-ul">
             <li class="nav-top-li" id = "CompositeScore"><div>综合得分</div></li>
@@ -30,6 +30,7 @@
             <li class="nav-top-li" id = "RankingList"><div>排行榜</div></li>
         </ul>
         <div class="current-time"></div>
+        <div class="banner-bg"></div>
     </div>
     <!--Middle-->
     <div class="middle">
@@ -45,24 +46,26 @@
             </ul>
 
             <div class="small-map">
-                <div class="change-icon"></div>
+                <!--<div class="change-icon"></div>-->
                 <div style="z-index: 10;position: absolute">
-                    <img src="imgs/maps/small-blank-bg.png" border="0" usemap="#Map2" class="img-bg"/>
+                    <img src="imgs/maps/small-test-bg.png" border="0" usemap="#Map2" class="img-bg"/>
                     <map name="Map2" id="Map2">
                         <!--杨浦区-->
-                        <area class="MapClick" id="yangpu" shape="poly" coords="295,27,320,36,348,54,364,72,358,95,359,106,361,113,366,120,362,142,349,155,314,172,290,168,277,140,276,133,266,112,277,97,259,90,260,59,281,59,282,39,291,34,295,27"/>
+                        <area class="MapClick" id="yangpu" shape="poly" coords="290,9,314,18,324,34,327,91,318,126,295,137,297,117,286,102,295,95,273,43,290,9"/>
                         <!--虹口区-->
-                        <area class="MapClick" id="hongkou" shape="poly" coords="222,46,252,54,252,94,266,97,259,113,280,167,254,168,246,172,248,162,217,112,222,79,222,46"/>
+                        <area class="MapClick" id="hongkou" shape="poly" coords="246,50,265,50,270,47,289,93,279,101,292,117,291,139,267,148,262,143,240,144,235,140,241,107,233,78,246,50"/>
                         <!--普陀区-->
-                        <area class="MapClick" id="putuo" shape="poly" coords="55,81,84,94,96,90,114,90,120,97,126,106,133,107,144,116,160,108,180,123,181,127,186,136,179,156,154,167,100,176,70,162,90,146,86,134,89,111,48,100,43,87,55,81"/>
+                        <area class="MapClick" id="putuo" shape="poly" coords="57,85,79,53,116,50,170,75,183,90,190,119,181,155,121,162,85,159,91,147,127,136,105,108,57,85"/>
                         <!--长宁区-->
-                        <area class="MapClick" id="changning" shape="poly" coords="64,169,72,175,85,175,94,181,141,178,152,185,152,193,159,200,154,202,153,216,127,228,95,214,80,220,46,211,42,198,60,188,64,169"/>
+                        <area class="MapClick" id="changning" shape="poly" coords="74,171,84,165,125,169,176,161,183,182,191,187,184,212,142,211,99,222,75,209,74,171"/>
                         <!--徐汇区-->
-                        <area class="MapClick" id="xuhui" shape="poly" coords="122,238,133,237,140,229,160,223,160,210,168,205,186,206,204,247,184,290,168,318,180,352,168,364,154,324,128,326,105,278,88,262,98,252,123,252,125,243,122,238"/>
-                        <!--静安区-->
-                        <area class="MapClick"  id="jingan" shape="poly" coords="213,43,215,76,210,111,241,162,240,172,211,172,204,167,206,186,190,189,184,198,166,199,158,193,158,182,150,176,155,172,185,166,190,144,194,142,188,119,161,104,158,90,133,66,148,50,176,46,184,34,213,43"/>
+                        <area class="MapClick" id="xuhui" shape="poly" coords="195,189,209,197,220,191,236,208,243,236,248,241,239,247,239,259,246,269,259,271,260,313,263,317,263,344,236,359,197,321,186,282,161,274,196,245,188,214,195,189"/>
+                        <!--静安北区-->
+                        <area class="MapClick"  id="jingan1" shape="poly" coords="176,74,197,45,243,48,229,79,236,110,195,113,188,89,176,74"/>
+                        <!--静安南区-->
+                        <area class="MapClick"  id="jingan2" shape="poly" coords="195,123,235,123,231,150,236,161,229,181,208,191,187,179,181,163,187,152,195,123"/>
                         <!--黄埔区-->
-                        <area class="MapClick" id="huangpu" shape="poly" coords="212,178,244,178,246,194,244,192,263,220,239,252,213,252,202,218,204,212,193,204,194,196,212,192,212,178"/>
+                        <area class="MapClick" id="huangpu" shape="poly" coords="237,149,261,149,261,177,281,203,281,219,255,239,247,235,239,199,225,189,234,183,236,173,243,162,237,149"/>
                     </map>
                 </div>
 
@@ -230,12 +233,6 @@
         <div class="right-box">
             <span class="c-title">综合排名变化情况</span>
             <ul>
-                <li>
-                    <div class="r-index">1</div>
-                    <div class="r-name">崇明区</div>
-                    <div class="r-progress"></div>
-                    <div class="r-grade">98</div>
-                </li>
             </ul>
         </div>
 
