@@ -111,21 +111,8 @@ body {
 .table-box .biaoTou {
     position: relative;
     width: 170px;
-}
-.table-box .biaoTou:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 1px solid #c87e00;
-    width: 192px;
-    height: 1px;
-    transform:rotate(29deg);
-    -ms-transform:rotate(29deg); 	/* IE 9 */
-    -moz-transform:rotate(29deg); 	/* Firefox */
-    -webkit-transform:rotate(29deg); /* Safari 和 Chrome */
-    -o-transform:rotate(29deg); 	/* Opera */
-    transform-origin: 0 0;
+    background: url("../imgs/biaotou.png") no-repeat;
+    background-size: cover;
 }
 
 .footer {
