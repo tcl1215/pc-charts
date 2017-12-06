@@ -267,6 +267,8 @@
     background: url("../imgs/small-bg.png") no-repeat center;
     margin-top: 10px;
     font-family: 'sszh';
+    top: 63px;
+    left: 8px;
 }
 .small-map .img-bg{width: 100%; height: 100%; }
 .small-map .map-cover {
@@ -276,7 +278,12 @@
 }
 .small-map-img{ position:absolute; z-index:1}
 .small-map-title{color:#fff; font-size:18px; font-weight:bold; position: absolute;z-index: 2;font-weight: normal;}
-
+.small-map-title.sm {
+    font-size: 12px;
+}
+.map-cover img {
+    transform:scale(0.5);-moz-transform:scale(0.5);-o-transform:scale(0.5);-webkit-transform:scale(0.5);transform-origin: 0 0;
+}
 
 .tip{position:absolute;width:533px;height:432px;top:0;right:0;background:url(../imgs/tip-bg.png); z-index:999;}
 .tip-img{ position:absolute; top:12px; left:36px; width:196px; height:105px;background-color: #fff;}
